@@ -58,4 +58,5 @@ public:
 	void SetCheats(CheatInfo cheats[], uint32_t length);
 
 	void ApplyCodes(uint16_t addr, uint8_t &value);
+	bool HasCheats();
 };
