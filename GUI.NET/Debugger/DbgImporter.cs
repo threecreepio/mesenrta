@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mesen.GUI.Config;
 using Mesen.GUI.Forms;
+using Newtonsoft.Json;
 
 namespace Mesen.GUI.Debugger
 {
@@ -38,13 +39,12 @@ namespace Mesen.GUI.Debugger
 		private HashSet<string> _filesNotFound = new HashSet<string>();
 		private int _errorCount = 0;
 
-		private static Regex _segmentRegex = new Regex("^seg\tid=([0-9]+),.*start=0x([0-9a-fA-F]+),.*size=0x([0-9A-Fa-f]+)", RegexOptions.Compiled);
+		private static Regex _segmentRegex = new Regex("^seg\tid=([0-9]+),.*start=0x([0-9a-fA-F]+),.*size=0x([0-9A-Fa-f]+),.*addrsize=([a-z]+)", RegexOptions.Compiled);
 		private static Regex _segmentPrgRomRegex = new Regex("^seg\tid=([0-9]+),.*start=0x([0-9a-fA-F]+),.*size=0x([0-9A-Fa-f]+),.*ooffs=([0-9]+)", RegexOptions.Compiled);
 		private static Regex _lineRegex = new Regex("^line\tid=([0-9]+),.*file=([0-9]+),.*line=([0-9]+)(,.*type=([0-9]+)){0,1}(,.*span=([0-9+]+)){0,1}", RegexOptions.Compiled);
 		private static Regex _fileRegex = new Regex("^file\tid=([0-9]+),.*name=\"([^\"]+)\"", RegexOptions.Compiled);
 		private static Regex _spanRegex = new Regex("^span\tid=([0-9]+),.*seg=([0-9]+),.*start=([0-9]+),.*size=([0-9]+)(,.*type=([0-9]+)){0,1}", RegexOptions.Compiled);
 		private static Regex _scopeRegex = new Regex("^scope\tid=([0-9]+),.*name=\"([0-9a-zA-Z@_-]+)\"(,.*sym=([0-9+]+)){0,1}", RegexOptions.Compiled);
-		private static Regex _symbolRegex = new Regex("^sym\tid=([0-9]+),.*name=\"([0-9a-zA-Z@_-]+)\"(,.*size=([0-9]+)){0,1}(,.*def=([0-9+]+)){0,1}(,.*ref=([0-9+]+)){0,1}(,.*val=0x([0-9a-fA-F]+)){0,1}(,.*seg=([0-9]+)){0,1}(,.*exp=([0-9]+)){0,1}", RegexOptions.Compiled);
 		private static Regex _cSymbolRegex = new Regex("^csym\tid=([0-9]+),.*name=\"([0-9a-zA-Z@_-]+)\"(,.*sym=([0-9+]+)){0,1}", RegexOptions.Compiled);
 
 		private static Regex _asmFirstLineRegex = new Regex(";(.*)", RegexOptions.Compiled);
@@ -272,6 +272,7 @@ namespace Mesen.GUI.Debugger
 					ID = Int32.Parse(match.Groups[1].Value),
 					Start = Int32.Parse(match.Groups[2].Value, NumberStyles.HexNumber),
 					Size = Int32.Parse(match.Groups[3].Value, NumberStyles.HexNumber),
+					AddrSize = match.Groups[4].Success ? match.Groups[4].Value : null,
 					IsRam = true
 				};
 
@@ -416,41 +417,81 @@ namespace Mesen.GUI.Debugger
 			return false;
 		}
 
+		private int ParseHexNumber(string number)
+	   {
+			if (number.StartsWith("0x"))
+			{
+				return int.Parse(number.Substring(2), NumberStyles.HexNumber);
+			}
+			return int.Parse(number, NumberStyles.HexNumber);
+	   }
+
 		private bool LoadSymbols(string row)
 		{
-			Match match = _symbolRegex.Match(row);
-			if(match.Success) {
-				SymbolInfo symbol = new SymbolInfo() {
-					ID = Int32.Parse(match.Groups[1].Value),
-					Name = match.Groups[2].Value,
-					Address = match.Groups[10].Success ? (int?)Int32.Parse(match.Groups[10].Value, NumberStyles.HexNumber) : null,
-					SegmentID = match.Groups[12].Success ? (int?)Int32.Parse(match.Groups[12].Value) : null,
-					ExportSymbolID = match.Groups[14].Success ? (int?)Int32.Parse(match.Groups[14].Value) : null
-				};
-
-				if(match.Groups[4].Success) {
-					symbol.Size = Int32.Parse(match.Groups[4].Value);
-				}
-
-				if(match.Groups[6].Success) {
-					symbol.Definitions = match.Groups[6].Value.Split('+').Select(o => Int32.Parse(o)).ToList();
-				} else {
-					symbol.Definitions = new List<int>();
-				}
-
-				if(match.Groups[8].Success) {
-					symbol.References = match.Groups[8].Value.Split('+').Select(o => Int32.Parse(o)).ToList();
-				} else {
-					symbol.References = new List<int>();
-				}
-
-				_symbols.Add(symbol.ID, symbol);
-				return true;
-			} else if(row.StartsWith("sym")) {
-				System.Diagnostics.Debug.Fail("Regex doesn't match sym");
+			if (!row.StartsWith("sym\t")) return false;
+			var dict = new Dictionary<string, string>();
+			foreach (var pair in row.Substring("sym\t".Length).Split(',')) {
+				var values = pair.Split(new[] { '=' }, 2);
+				dict.Add(values[0], values[1]);
 			}
 
-			return false;
+			SymbolInfo symbol = new SymbolInfo() {
+				ID =  int.Parse(dict["id"]),
+				Name = dict["name"].Trim('"'),
+				Address = dict.ContainsKey("val") ? ParseHexNumber(dict["val"]) : (int?) null,
+				SegmentID = dict.ContainsKey("seg") ? int.Parse(dict["seg"]) : (int?) null,
+				ExportSymbolID = dict.ContainsKey("exp") ? int.Parse(dict["exp"]) : (int?) null
+			};
+			symbol.Definitions = new List<int>();
+			symbol.References = new List<int>();
+
+			if (dict.ContainsKey("size")) {
+				symbol.Size = int.Parse(dict["size"]);
+			}
+
+			if (dict.ContainsKey("def"))
+			{
+				symbol.Definitions.AddRange(dict["def"].Split('+').Select(int.Parse));
+			}
+
+			if (dict.ContainsKey("ref"))
+			{
+				symbol.References.AddRange(dict["ref"].Split('+').Select(int.Parse));
+			}
+
+			// generate labels for things which might be RAM addresses
+			if (dict["type"] == "equ" && symbol.SegmentID == null)
+			{
+				// get hex value of symbol
+				var value = ParseHexNumber(dict["val"]);
+				// find all segments marked as ram
+				var ramSegments = _segments.Where(s => s.Value.IsRam);
+				// find all ram segments that contain the symbol
+				var segmentsInRange = ramSegments.Where(s => (
+					s.Value.Start <= value && (s.Value.Size == 0 || s.Value.Start + s.Value.Size > value)
+				));
+				// get the last valid segment found
+				var preferredSegment = segmentsInRange.OrderByDescending(s => s.Value.Start).FirstOrDefault();
+				// if any segments were found, assign its id to the symbol
+				if (preferredSegment.Value != null)
+				{
+					symbol.SegmentID = preferredSegment.Key;
+				}
+			}
+
+			// attempt to locate labels with missing segments
+			if (dict["type"] == "lab" && symbol.SegmentID == null && symbol.Definitions.Count > 0)
+			{
+				// take the first span that was found as a definition of the label, can be multiple, but ignore that for now..
+				var firstDefinition = symbol.Definitions[0];
+				// and find the closest span to the definition that is marked with a segment id
+				var foundSpan = _spans.LastOrDefault(v => v.Value.Offset <= firstDefinition);
+				// update the symbols segment id if one was found.
+				symbol.SegmentID = foundSpan.Value?.SegmentID;
+			}
+
+			_symbols.Add(symbol.ID, symbol);
+			return true;
 		}
 
 		public int GetSymbolSize(SymbolInfo symbol)
@@ -546,7 +587,7 @@ namespace Mesen.GUI.Debugger
 						}
 
 						AddressTypeInfo addressInfo = GetSymbolAddressInfo(symbol);
-						if(symbol.Address != null && symbol.Address >= 0) {
+						if(addressInfo != null && symbol.Address != null && symbol.Address >= 0) {
 							CodeLabel label = this.CreateLabel(addressInfo.Address, addressInfo.Type, (uint)GetSymbolSize(symbol));
 							if(label != null) {
 								label.Label = newName;
@@ -904,6 +945,7 @@ namespace Mesen.GUI.Debugger
 			public int Start;
 			public int Size;
 			public int FileOffset;
+			public string AddrSize;
 			public bool IsRam;
 		}
 
