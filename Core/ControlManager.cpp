@@ -295,10 +295,8 @@ void ControlManager::UpdateInputState()
 		debugger->ProcessEvent(EventType::InputPolled);
 	}
 
-	if(!_console->GetSettings()->IsRunAheadFrame()) {
-		for(IInputRecorder* recorder : _inputRecorders) {
-			recorder->RecordInput(_controlDevices);
-		}
+	for(IInputRecorder* recorder : _inputRecorders) {
+		recorder->RecordInput(_controlDevices);
 	}
 
 	//Used by VS System games

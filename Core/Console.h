@@ -100,8 +100,6 @@ private:
 	bool _initialized = false;
 	std::thread::id _emulationThreadId;
 
-	void RunFrameWithRunAhead(std::stringstream& runAheadState);
-
 	void LoadHdPack(VirtualFile &romFile, VirtualFile &patchFile);
 
 	void UpdateNesModel(bool sendNotification);

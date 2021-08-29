@@ -309,8 +309,6 @@
 			<Control ID="lblTurboSpeed">Velocidade de avanço rápido:</Control>
 			<Control ID="lblRewindSpeedHint">%  (0 = Velocidade máxima)</Control>
 			<Control ID="lblRewindSpeed">Velocidade de rebobinamento:</Control>
-			<Control ID="lblRunAhead">Execução antecipada:</Control>
-			<Control ID="lblRunAheadFrames">quadros (reduz a latência dos controles e aumenta o uso da CPU)</Control>
 
 			<Control ID="tpgAdvanced">Avançado</Control>
 			<Control ID="lblDeveloperSettings">Configurações recomendadas para programadores (homebrew / ROM hacking)</Control>

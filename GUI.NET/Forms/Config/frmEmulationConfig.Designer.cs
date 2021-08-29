@@ -34,10 +34,6 @@ namespace Mesen.GUI.Forms.Config
 			this.tabMain = new System.Windows.Forms.TabControl();
 			this.tpgGeneral = new System.Windows.Forms.TabPage();
 			this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-			this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-			this.nudRunAheadFrames = new Mesen.GUI.Controls.MesenNumericUpDown();
-			this.lblRunAheadFrames = new System.Windows.Forms.Label();
-			this.lblRunAhead = new System.Windows.Forms.Label();
 			this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
 			this.nudTurboSpeed = new Mesen.GUI.Controls.MesenNumericUpDown();
 			this.lblTurboSpeedHint = new System.Windows.Forms.Label();
@@ -96,7 +92,6 @@ namespace Mesen.GUI.Forms.Config
 			this.tabMain.SuspendLayout();
 			this.tpgGeneral.SuspendLayout();
 			this.tableLayoutPanel4.SuspendLayout();
-			this.flowLayoutPanel5.SuspendLayout();
 			this.flowLayoutPanel9.SuspendLayout();
 			this.flowLayoutPanel6.SuspendLayout();
 			this.flowLayoutPanel10.SuspendLayout();
@@ -148,8 +143,6 @@ namespace Mesen.GUI.Forms.Config
 			this.tableLayoutPanel4.ColumnCount = 2;
 			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
 			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel5, 1, 3);
-			this.tableLayoutPanel4.Controls.Add(this.lblRunAhead, 0, 3);
 			this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel9, 1, 1);
 			this.tableLayoutPanel4.Controls.Add(this.lblTurboSpeed, 0, 1);
 			this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel6, 1, 0);
@@ -167,69 +160,6 @@ namespace Mesen.GUI.Forms.Config
 			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tableLayoutPanel4.Size = new System.Drawing.Size(519, 376);
 			this.tableLayoutPanel4.TabIndex = 0;
-			// 
-			// flowLayoutPanel5
-			// 
-			this.flowLayoutPanel5.AutoSize = true;
-			this.flowLayoutPanel5.Controls.Add(this.nudRunAheadFrames);
-			this.flowLayoutPanel5.Controls.Add(this.lblRunAheadFrames);
-			this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.flowLayoutPanel5.Location = new System.Drawing.Point(111, 81);
-			this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
-			this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-			this.flowLayoutPanel5.Size = new System.Drawing.Size(408, 27);
-			this.flowLayoutPanel5.TabIndex = 18;
-			// 
-			// nudRunAheadFrames
-			// 
-			this.nudRunAheadFrames.DecimalPlaces = 0;
-			this.nudRunAheadFrames.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.nudRunAheadFrames.IsHex = false;
-			this.nudRunAheadFrames.Location = new System.Drawing.Point(3, 3);
-			this.nudRunAheadFrames.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.nudRunAheadFrames.MaximumSize = new System.Drawing.Size(10000, 20);
-			this.nudRunAheadFrames.Minimum = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-			this.nudRunAheadFrames.MinimumSize = new System.Drawing.Size(0, 21);
-			this.nudRunAheadFrames.Name = "nudRunAheadFrames";
-			this.nudRunAheadFrames.Size = new System.Drawing.Size(48, 21);
-			this.nudRunAheadFrames.TabIndex = 1;
-			this.nudRunAheadFrames.Value = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-			// 
-			// lblRunAheadFrames
-			// 
-			this.lblRunAheadFrames.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.lblRunAheadFrames.AutoSize = true;
-			this.lblRunAheadFrames.Location = new System.Drawing.Point(57, 7);
-			this.lblRunAheadFrames.Name = "lblRunAheadFrames";
-			this.lblRunAheadFrames.Size = new System.Drawing.Size(277, 13);
-			this.lblRunAheadFrames.TabIndex = 2;
-			this.lblRunAheadFrames.Text = "frames (reduces input lag, increases system requirements)";
-			// 
-			// lblRunAhead
-			// 
-			this.lblRunAhead.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.lblRunAhead.AutoSize = true;
-			this.lblRunAhead.Location = new System.Drawing.Point(3, 88);
-			this.lblRunAhead.Name = "lblRunAhead";
-			this.lblRunAhead.Size = new System.Drawing.Size(64, 13);
-			this.lblRunAhead.TabIndex = 17;
-			this.lblRunAhead.Text = "Run Ahead:";
 			// 
 			// flowLayoutPanel9
 			// 
@@ -1006,6 +936,7 @@ namespace Mesen.GUI.Forms.Config
 			this.AutoSize = true;
 			this.ClientSize = new System.Drawing.Size(533, 437);
 			this.Controls.Add(this.tabMain);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -1020,8 +951,6 @@ namespace Mesen.GUI.Forms.Config
 			this.tpgGeneral.PerformLayout();
 			this.tableLayoutPanel4.ResumeLayout(false);
 			this.tableLayoutPanel4.PerformLayout();
-			this.flowLayoutPanel5.ResumeLayout(false);
-			this.flowLayoutPanel5.PerformLayout();
 			this.flowLayoutPanel9.ResumeLayout(false);
 			this.flowLayoutPanel9.PerformLayout();
 			this.flowLayoutPanel6.ResumeLayout(false);
@@ -1109,10 +1038,6 @@ namespace Mesen.GUI.Forms.Config
 		private ctrlRiskyOption chkRandomizeCpuPpuAlignment;
 		private ctrlRiskyOption chkEnablePpu2000ScrollGlitch;
 		private ctrlRiskyOption chkEnablePpu2006ScrollGlitch;
-	  private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-	  private MesenNumericUpDown nudRunAheadFrames;
-	  private System.Windows.Forms.Label lblRunAheadFrames;
-	  private System.Windows.Forms.Label lblRunAhead;
 	  private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
 	  private ctrlRiskyOption chkEnablePpuOamRowCorruption;
    }
