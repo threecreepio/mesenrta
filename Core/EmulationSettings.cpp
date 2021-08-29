@@ -3,10 +3,10 @@
 #include "Console.h"
 #include "RewindManager.h"
 
-//Version 0.9.9
+//Version 0.0.1
 uint16_t EmulationSettings::_versionMajor = 0;
-uint8_t EmulationSettings::_versionMinor = 9;
-uint8_t EmulationSettings::_versionRevision = 9;
+uint8_t EmulationSettings::_versionMinor = 0;
+uint8_t EmulationSettings::_versionRevision = 1;
 
 SimpleLock EmulationSettings::_lock;
 SimpleLock EmulationSettings::_shortcutLock;
