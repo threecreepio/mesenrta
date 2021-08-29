@@ -137,7 +137,7 @@ namespace Mesen.GUI.Config
 		public bool DisplayInputPort2 = false;
 		public bool DisplayInputPort3 = false;
 		public bool DisplayInputPort4 = false;
-		public InteropEmu.InputDisplayPosition DisplayInputPosition = InteropEmu.InputDisplayPosition.BottomRight;
+		public InteropEmu.InputDisplayPosition DisplayInputPosition = InteropEmu.InputDisplayPosition.BottomLeft;
 		public bool DisplayInputHorizontally = true;
 
 		[MinMax(0, 4)] public UInt32 ControllerDeadzoneSize = 2;
