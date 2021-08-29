@@ -45,7 +45,13 @@ namespace MesenUpdater
 
 				try
 				{
-					ZipFile.ExtractToDirectory(srcFile, destDir);
+					using (var zip = ZipFile.OpenRead(srcFile))
+					{
+						foreach (var entry in zip.Entries)
+						{
+							entry.ExtractToFile(Path.Combine(destDir, entry.FullName), true);
+						}
+					}
 				} catch {
 					MessageBox.Show("Update failed. Please try downloading and installing the new version manually.", "Mesen", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;
