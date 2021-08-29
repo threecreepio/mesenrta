@@ -342,7 +342,7 @@ namespace Mesen.GUI.Forms.Config
 			this.chkDisplayMovieIcons.Name = "chkDisplayMovieIcons";
 			this.chkDisplayMovieIcons.Size = new System.Drawing.Size(304, 17);
 			this.chkDisplayMovieIcons.TabIndex = 19;
-			this.chkDisplayMovieIcons.Text = "Display play/record icon when playing or recording a movie";
+			this.chkDisplayMovieIcons.Text = "Display record icon when recording a movie";
 			this.chkDisplayMovieIcons.UseVisualStyleBackColor = true;
 			// 
 			// chkAutoHideMenu
