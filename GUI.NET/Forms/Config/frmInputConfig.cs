@@ -40,7 +40,6 @@ namespace Mesen.GUI.Forms.Config
 			AddBinding("UseFourScore", chkFourScore);
 			AddBinding("AutoConfigureInput", chkAutoConfigureInput);
 
-			AddBinding("DisplayInputPort1", chkDisplayPort1);
 			AddBinding("DisplayInputPort2", chkDisplayPort2);
 			AddBinding("DisplayInputPort3", chkDisplayPort3);
 			AddBinding("DisplayInputPort4", chkDisplayPort4);
