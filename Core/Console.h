@@ -181,6 +181,7 @@ public:
 
 	void Reset(bool softReset = true);
 	void PowerCycle();
+	void ShowResetStatus(int resetType);
 	void ReloadRom(bool forPowerCycle = false);
 	void ResetComponents(bool softReset);
 
