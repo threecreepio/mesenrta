@@ -173,6 +173,11 @@ void CheatManager::ApplyCodes(uint16_t addr, uint8_t &value)
 	}
 }
 
+bool CheatManager::HasCheats()
+{
+	return _hasCode;
+}
+
 vector<CodeInfo> CheatManager::GetCheats()
 {
 	//Used by NetPlay
