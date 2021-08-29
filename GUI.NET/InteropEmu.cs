@@ -209,7 +209,6 @@ namespace Mesen.GUI
 		[DllImport(DLLPath)] public static extern void SetSampleRate(UInt32 sampleRate);
 		[DllImport(DLLPath)] public static extern void SetAudioLatency(UInt32 msLatency);
 		[DllImport(DLLPath)] public static extern void SetAudioFilterSettings(AudioFilterSettings settings);
-		[DllImport(DLLPath)] public static extern void SetRunAheadFrames(UInt32 frameCount);
 
 		[DllImport(DLLPath)] public static extern NesModel GetNesModel();
 		[DllImport(DLLPath)] public static extern void SetNesModel(NesModel model);

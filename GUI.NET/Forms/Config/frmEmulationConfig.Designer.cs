@@ -29,222 +29,153 @@ namespace Mesen.GUI.Forms.Config
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmulationConfig));
-            this.tabMain = new System.Windows.Forms.TabControl();
-            this.tpgGeneral = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.nudRunAheadFrames = new Mesen.GUI.Controls.MesenNumericUpDown();
-            this.lblRunAheadFrames = new System.Windows.Forms.Label();
-            this.lblRunAhead = new System.Windows.Forms.Label();
-            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
-            this.nudTurboSpeed = new Mesen.GUI.Controls.MesenNumericUpDown();
-            this.lblTurboSpeedHint = new System.Windows.Forms.Label();
-            this.lblTurboSpeed = new System.Windows.Forms.Label();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.nudEmulationSpeed = new Mesen.GUI.Controls.MesenNumericUpDown();
-            this.lblEmuSpeedHint = new System.Windows.Forms.Label();
-            this.lblEmulationSpeed = new System.Windows.Forms.Label();
-            this.lblRewindSpeed = new System.Windows.Forms.Label();
-            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
-            this.nudRewindSpeed = new Mesen.GUI.Controls.MesenNumericUpDown();
-            this.lblRewindSpeedHint = new System.Windows.Forms.Label();
-            this.tpgAdvanced = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.chkEnablePpu2000ScrollGlitch = new Mesen.GUI.Controls.ctrlRiskyOption();
-            this.chkEnablePpu2006ScrollGlitch = new Mesen.GUI.Controls.ctrlRiskyOption();
-            this.chkRandomizeCpuPpuAlignment = new Mesen.GUI.Controls.ctrlRiskyOption();
-            this.lblMiscSettings = new System.Windows.Forms.Label();
-            this.chkMapperRandomPowerOnState = new Mesen.GUI.Controls.ctrlRiskyOption();
-            this.chkEnableOamDecay = new Mesen.GUI.Controls.ctrlRiskyOption();
-            this.lblRamPowerOnState = new System.Windows.Forms.Label();
-            this.cboRamPowerOnState = new System.Windows.Forms.ComboBox();
-            this.chkDisablePaletteRead = new Mesen.GUI.Controls.ctrlRiskyOption();
-            this.chkDisableOamAddrBug = new Mesen.GUI.Controls.ctrlRiskyOption();
-            this.chkDisablePpuReset = new Mesen.GUI.Controls.ctrlRiskyOption();
-            this.chkDisablePpu2004Reads = new Mesen.GUI.Controls.ctrlRiskyOption();
-            this.chkUseNes101Hvc101Behavior = new System.Windows.Forms.CheckBox();
-            this.chkAllowInvalidInput = new Mesen.GUI.Controls.ctrlRiskyOption();
-            this.chkUseAlternativeMmc3Irq = new System.Windows.Forms.CheckBox();
-            this.lblDeveloperSettings = new System.Windows.Forms.Label();
-            this.tpgOverclocking = new System.Windows.Forms.TabPage();
-            this.picHint = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblOverclockHint = new Mesen.GUI.Controls.ctrlAutoGrowLabel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblEffectiveClockRateDendy = new System.Windows.Forms.Label();
-            this.lblEffectiveClockRateValueDendy = new System.Windows.Forms.Label();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblEffectiveClockRatePal = new System.Windows.Forms.Label();
-            this.lblEffectiveClockRateValuePal = new System.Windows.Forms.Label();
-            this.grpPpuTiming = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.nudExtraScanlinesAfterNmi = new Mesen.GUI.Controls.MesenNumericUpDown();
-            this.nudExtraScanlinesBeforeNmi = new Mesen.GUI.Controls.MesenNumericUpDown();
-            this.lblExtraScanlinesBeforeNmi = new System.Windows.Forms.Label();
-            this.lblExtraScanlinesAfterNmi = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblEffectiveClockRate = new System.Windows.Forms.Label();
-            this.lblEffectiveClockRateValue = new System.Windows.Forms.Label();
-            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.chkShowLagCounter = new System.Windows.Forms.CheckBox();
-            this.btnResetLagCounter = new System.Windows.Forms.Button();
-            this.tmrUpdateClockRate = new System.Windows.Forms.Timer(this.components);
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tabMain.SuspendLayout();
-            this.tpgGeneral.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel9.SuspendLayout();
-            this.flowLayoutPanel6.SuspendLayout();
-            this.flowLayoutPanel10.SuspendLayout();
-            this.tpgAdvanced.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tpgOverclocking.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHint)).BeginInit();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.grpPpuTiming.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel7.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // baseConfigPanel
-            // 
-            this.baseConfigPanel.Location = new System.Drawing.Point(0, 386);
-            this.baseConfigPanel.Size = new System.Drawing.Size(533, 29);
-            // 
-            // tabMain
-            // 
-            this.tabMain.Controls.Add(this.tpgGeneral);
-            this.tabMain.Controls.Add(this.tpgAdvanced);
-            this.tabMain.Controls.Add(this.tpgOverclocking);
-            this.tabMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabMain.Location = new System.Drawing.Point(0, 0);
-            this.tabMain.Name = "tabMain";
-            this.tabMain.SelectedIndex = 0;
-            this.tabMain.Size = new System.Drawing.Size(533, 386);
-            this.tabMain.TabIndex = 2;
-            // 
-            // tpgGeneral
-            // 
-            this.tpgGeneral.Controls.Add(this.tableLayoutPanel4);
-            this.tpgGeneral.Location = new System.Drawing.Point(4, 22);
-            this.tpgGeneral.Name = "tpgGeneral";
-            this.tpgGeneral.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgGeneral.Size = new System.Drawing.Size(525, 360);
-            this.tpgGeneral.TabIndex = 0;
-            this.tpgGeneral.Text = "General";
-            this.tpgGeneral.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.AutoSize = true;
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel5, 1, 3);
-            this.tableLayoutPanel4.Controls.Add(this.lblRunAhead, 0, 3);
-            this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel9, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lblTurboSpeed, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel6, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.lblEmulationSpeed, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.lblRewindSpeed, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel10, 1, 2);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 5;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(519, 354);
-            this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.AutoSize = true;
-            this.flowLayoutPanel5.Controls.Add(this.nudRunAheadFrames);
-            this.flowLayoutPanel5.Controls.Add(this.lblRunAheadFrames);
-            this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(111, 81);
-            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(408, 27);
-            this.flowLayoutPanel5.TabIndex = 18;
-            // 
-            // nudRunAheadFrames
-            // 
-            this.nudRunAheadFrames.DecimalPlaces = 0;
-            this.nudRunAheadFrames.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudRunAheadFrames.Location = new System.Drawing.Point(3, 3);
-            this.nudRunAheadFrames.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudRunAheadFrames.MaximumSize = new System.Drawing.Size(10000, 20);
-            this.nudRunAheadFrames.Minimum = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.nudRunAheadFrames.MinimumSize = new System.Drawing.Size(0, 21);
-            this.nudRunAheadFrames.Name = "nudRunAheadFrames";
-            this.nudRunAheadFrames.Size = new System.Drawing.Size(48, 21);
-            this.nudRunAheadFrames.TabIndex = 1;
-            this.nudRunAheadFrames.Value = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            // 
-            // lblRunAheadFrames
-            // 
-            this.lblRunAheadFrames.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblRunAheadFrames.AutoSize = true;
-            this.lblRunAheadFrames.Location = new System.Drawing.Point(57, 7);
-            this.lblRunAheadFrames.Name = "lblRunAheadFrames";
-            this.lblRunAheadFrames.Size = new System.Drawing.Size(277, 13);
-            this.lblRunAheadFrames.TabIndex = 2;
-            this.lblRunAheadFrames.Text = "frames (reduces input lag, increases system requirements)";
-            // 
-            // lblRunAhead
-            // 
-            this.lblRunAhead.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblRunAhead.AutoSize = true;
-            this.lblRunAhead.Location = new System.Drawing.Point(3, 88);
-            this.lblRunAhead.Name = "lblRunAhead";
-            this.lblRunAhead.Size = new System.Drawing.Size(64, 13);
-            this.lblRunAhead.TabIndex = 17;
-            this.lblRunAhead.Text = "Run Ahead:";
-            // 
-            // flowLayoutPanel9
-            // 
-            this.flowLayoutPanel9.AutoSize = true;
-            this.flowLayoutPanel9.Controls.Add(this.nudTurboSpeed);
-            this.flowLayoutPanel9.Controls.Add(this.lblTurboSpeedHint);
-            this.flowLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(111, 27);
-            this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(408, 27);
-            this.flowLayoutPanel9.TabIndex = 14;
-            // 
-            // nudTurboSpeed
-            // 
-            this.nudTurboSpeed.DecimalPlaces = 0;
-            this.nudTurboSpeed.Increment = new decimal(new int[] {
+			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmulationConfig));
+			this.tabMain = new System.Windows.Forms.TabControl();
+			this.tpgGeneral = new System.Windows.Forms.TabPage();
+			this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+			this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+			this.nudTurboSpeed = new Mesen.GUI.Controls.MesenNumericUpDown();
+			this.lblTurboSpeedHint = new System.Windows.Forms.Label();
+			this.lblTurboSpeed = new System.Windows.Forms.Label();
+			this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+			this.nudEmulationSpeed = new Mesen.GUI.Controls.MesenNumericUpDown();
+			this.lblEmuSpeedHint = new System.Windows.Forms.Label();
+			this.lblEmulationSpeed = new System.Windows.Forms.Label();
+			this.lblRewindSpeed = new System.Windows.Forms.Label();
+			this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
+			this.nudRewindSpeed = new Mesen.GUI.Controls.MesenNumericUpDown();
+			this.lblRewindSpeedHint = new System.Windows.Forms.Label();
+			this.tpgAdvanced = new System.Windows.Forms.TabPage();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.chkEnablePpu2000ScrollGlitch = new Mesen.GUI.Controls.ctrlRiskyOption();
+			this.chkEnablePpu2006ScrollGlitch = new Mesen.GUI.Controls.ctrlRiskyOption();
+			this.chkRandomizeCpuPpuAlignment = new Mesen.GUI.Controls.ctrlRiskyOption();
+			this.lblMiscSettings = new System.Windows.Forms.Label();
+			this.chkMapperRandomPowerOnState = new Mesen.GUI.Controls.ctrlRiskyOption();
+			this.chkEnableOamDecay = new Mesen.GUI.Controls.ctrlRiskyOption();
+			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+			this.cboRamPowerOnState = new System.Windows.Forms.ComboBox();
+			this.lblRamPowerOnState = new System.Windows.Forms.Label();
+			this.chkDisablePaletteRead = new Mesen.GUI.Controls.ctrlRiskyOption();
+			this.chkDisableOamAddrBug = new Mesen.GUI.Controls.ctrlRiskyOption();
+			this.chkDisablePpuReset = new Mesen.GUI.Controls.ctrlRiskyOption();
+			this.chkDisablePpu2004Reads = new Mesen.GUI.Controls.ctrlRiskyOption();
+			this.chkUseNes101Hvc101Behavior = new System.Windows.Forms.CheckBox();
+			this.chkAllowInvalidInput = new Mesen.GUI.Controls.ctrlRiskyOption();
+			this.chkUseAlternativeMmc3Irq = new System.Windows.Forms.CheckBox();
+			this.lblDeveloperSettings = new System.Windows.Forms.Label();
+			this.tpgOverclocking = new System.Windows.Forms.TabPage();
+			this.picHint = new System.Windows.Forms.PictureBox();
+			this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+			this.lblOverclockHint = new Mesen.GUI.Controls.ctrlAutoGrowLabel();
+			this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+			this.lblEffectiveClockRateDendy = new System.Windows.Forms.Label();
+			this.lblEffectiveClockRateValueDendy = new System.Windows.Forms.Label();
+			this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+			this.lblEffectiveClockRatePal = new System.Windows.Forms.Label();
+			this.lblEffectiveClockRateValuePal = new System.Windows.Forms.Label();
+			this.grpPpuTiming = new System.Windows.Forms.GroupBox();
+			this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+			this.nudExtraScanlinesAfterNmi = new Mesen.GUI.Controls.MesenNumericUpDown();
+			this.nudExtraScanlinesBeforeNmi = new Mesen.GUI.Controls.MesenNumericUpDown();
+			this.lblExtraScanlinesBeforeNmi = new System.Windows.Forms.Label();
+			this.lblExtraScanlinesAfterNmi = new System.Windows.Forms.Label();
+			this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+			this.lblEffectiveClockRate = new System.Windows.Forms.Label();
+			this.lblEffectiveClockRateValue = new System.Windows.Forms.Label();
+			this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+			this.chkShowLagCounter = new System.Windows.Forms.CheckBox();
+			this.btnResetLagCounter = new System.Windows.Forms.Button();
+			this.tmrUpdateClockRate = new System.Windows.Forms.Timer(this.components);
+			this.tabMain.SuspendLayout();
+			this.tpgGeneral.SuspendLayout();
+			this.tableLayoutPanel4.SuspendLayout();
+			this.flowLayoutPanel9.SuspendLayout();
+			this.flowLayoutPanel6.SuspendLayout();
+			this.flowLayoutPanel10.SuspendLayout();
+			this.tpgAdvanced.SuspendLayout();
+			this.tableLayoutPanel1.SuspendLayout();
+			this.tableLayoutPanel2.SuspendLayout();
+			this.tpgOverclocking.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.picHint)).BeginInit();
+			this.tableLayoutPanel3.SuspendLayout();
+			this.flowLayoutPanel4.SuspendLayout();
+			this.flowLayoutPanel3.SuspendLayout();
+			this.grpPpuTiming.SuspendLayout();
+			this.tableLayoutPanel5.SuspendLayout();
+			this.flowLayoutPanel2.SuspendLayout();
+			this.flowLayoutPanel7.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// baseConfigPanel
+			// 
+			this.baseConfigPanel.Location = new System.Drawing.Point(0, 408);
+			this.baseConfigPanel.Size = new System.Drawing.Size(533, 29);
+			// 
+			// tabMain
+			// 
+			this.tabMain.Controls.Add(this.tpgGeneral);
+			this.tabMain.Controls.Add(this.tpgAdvanced);
+			this.tabMain.Controls.Add(this.tpgOverclocking);
+			this.tabMain.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabMain.Location = new System.Drawing.Point(0, 0);
+			this.tabMain.Name = "tabMain";
+			this.tabMain.SelectedIndex = 0;
+			this.tabMain.Size = new System.Drawing.Size(533, 408);
+			this.tabMain.TabIndex = 2;
+			// 
+			// tpgGeneral
+			// 
+			this.tpgGeneral.Controls.Add(this.tableLayoutPanel4);
+			this.tpgGeneral.Location = new System.Drawing.Point(4, 22);
+			this.tpgGeneral.Name = "tpgGeneral";
+			this.tpgGeneral.Padding = new System.Windows.Forms.Padding(3);
+			this.tpgGeneral.Size = new System.Drawing.Size(525, 382);
+			this.tpgGeneral.TabIndex = 0;
+			this.tpgGeneral.Text = "General";
+			this.tpgGeneral.UseVisualStyleBackColor = true;
+			// 
+			// tableLayoutPanel4
+			// 
+			this.tableLayoutPanel4.AutoSize = true;
+			this.tableLayoutPanel4.ColumnCount = 2;
+			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel9, 1, 1);
+			this.tableLayoutPanel4.Controls.Add(this.lblTurboSpeed, 0, 1);
+			this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel6, 1, 0);
+			this.tableLayoutPanel4.Controls.Add(this.lblEmulationSpeed, 0, 0);
+			this.tableLayoutPanel4.Controls.Add(this.lblRewindSpeed, 0, 2);
+			this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel10, 1, 2);
+			this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+			this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+			this.tableLayoutPanel4.RowCount = 5;
+			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel4.Size = new System.Drawing.Size(519, 376);
+			this.tableLayoutPanel4.TabIndex = 0;
+			// 
+			// flowLayoutPanel9
+			// 
+			this.flowLayoutPanel9.AutoSize = true;
+			this.flowLayoutPanel9.Controls.Add(this.nudTurboSpeed);
+			this.flowLayoutPanel9.Controls.Add(this.lblTurboSpeedHint);
+			this.flowLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.flowLayoutPanel9.Location = new System.Drawing.Point(111, 27);
+			this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
+			this.flowLayoutPanel9.Name = "flowLayoutPanel9";
+			this.flowLayoutPanel9.Size = new System.Drawing.Size(408, 27);
+			this.flowLayoutPanel9.TabIndex = 14;
+			// 
+			// nudTurboSpeed
+			// 
+			this.nudTurboSpeed.DecimalPlaces = 0;
+			this.nudTurboSpeed.Increment = new decimal(new int[] {
             1,
             0,
             0,
@@ -872,161 +803,145 @@ namespace Mesen.GUI.Forms.Config
             0,
             0,
             0});
-            // 
-            // lblExtraScanlinesBeforeNmi
-            // 
-            this.lblExtraScanlinesBeforeNmi.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblExtraScanlinesBeforeNmi.AutoSize = true;
-            this.lblExtraScanlinesBeforeNmi.Location = new System.Drawing.Point(3, 7);
-            this.lblExtraScanlinesBeforeNmi.Name = "lblExtraScanlinesBeforeNmi";
-            this.lblExtraScanlinesBeforeNmi.Size = new System.Drawing.Size(159, 13);
-            this.lblExtraScanlinesBeforeNmi.TabIndex = 0;
-            this.lblExtraScanlinesBeforeNmi.Text = "Additional scanlines before NMI:";
-            // 
-            // lblExtraScanlinesAfterNmi
-            // 
-            this.lblExtraScanlinesAfterNmi.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblExtraScanlinesAfterNmi.AutoSize = true;
-            this.lblExtraScanlinesAfterNmi.Location = new System.Drawing.Point(3, 34);
-            this.lblExtraScanlinesAfterNmi.Name = "lblExtraScanlinesAfterNmi";
-            this.lblExtraScanlinesAfterNmi.Size = new System.Drawing.Size(150, 13);
-            this.lblExtraScanlinesAfterNmi.TabIndex = 1;
-            this.lblExtraScanlinesAfterNmi.Text = "Additional scanlines after NMI:";
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.lblEffectiveClockRate);
-            this.flowLayoutPanel2.Controls.Add(this.lblEffectiveClockRateValue);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 118);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(519, 17);
-            this.flowLayoutPanel2.TabIndex = 8;
-            // 
-            // lblEffectiveClockRate
-            // 
-            this.lblEffectiveClockRate.AutoSize = true;
-            this.lblEffectiveClockRate.Location = new System.Drawing.Point(3, 0);
-            this.lblEffectiveClockRate.Name = "lblEffectiveClockRate";
-            this.lblEffectiveClockRate.Size = new System.Drawing.Size(146, 13);
-            this.lblEffectiveClockRate.TabIndex = 0;
-            this.lblEffectiveClockRate.Text = "Effective Clock Rate (NTSC):";
-            // 
-            // lblEffectiveClockRateValue
-            // 
-            this.lblEffectiveClockRateValue.AutoSize = true;
-            this.lblEffectiveClockRateValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEffectiveClockRateValue.Location = new System.Drawing.Point(155, 0);
-            this.lblEffectiveClockRateValue.Name = "lblEffectiveClockRateValue";
-            this.lblEffectiveClockRateValue.Size = new System.Drawing.Size(37, 13);
-            this.lblEffectiveClockRateValue.TabIndex = 1;
-            this.lblEffectiveClockRateValue.Text = "100%";
-            // 
-            // flowLayoutPanel7
-            // 
-            this.flowLayoutPanel7.Controls.Add(this.chkShowLagCounter);
-            this.flowLayoutPanel7.Controls.Add(this.btnResetLagCounter);
-            this.flowLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(0, 172);
-            this.flowLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(519, 182);
-            this.flowLayoutPanel7.TabIndex = 12;
-            // 
-            // chkShowLagCounter
-            // 
-            this.chkShowLagCounter.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.chkShowLagCounter.AutoSize = true;
-            this.chkShowLagCounter.Location = new System.Drawing.Point(3, 6);
-            this.chkShowLagCounter.Name = "chkShowLagCounter";
-            this.chkShowLagCounter.Size = new System.Drawing.Size(114, 17);
-            this.chkShowLagCounter.TabIndex = 13;
-            this.chkShowLagCounter.Text = "Show Lag Counter";
-            this.chkShowLagCounter.UseVisualStyleBackColor = true;
-            // 
-            // btnResetLagCounter
-            // 
-            this.btnResetLagCounter.AutoSize = true;
-            this.btnResetLagCounter.Location = new System.Drawing.Point(123, 3);
-            this.btnResetLagCounter.Name = "btnResetLagCounter";
-            this.btnResetLagCounter.Size = new System.Drawing.Size(85, 23);
-            this.btnResetLagCounter.TabIndex = 14;
-            this.btnResetLagCounter.Text = "Reset Counter";
-            this.btnResetLagCounter.UseVisualStyleBackColor = true;
-            this.btnResetLagCounter.Click += new System.EventHandler(this.btnResetLagCounter_Click);
-            // 
-            // tmrUpdateClockRate
-            // 
-            this.tmrUpdateClockRate.Enabled = true;
-            this.tmrUpdateClockRate.Tick += new System.EventHandler(this.tmrUpdateClockRate_Tick);
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.cboRamPowerOnState, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblRamPowerOnState, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 135);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(519, 26);
-            this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // frmEmulationConfig
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(533, 415);
-            this.Controls.Add(this.tabMain);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(503, 367);
-            this.Name = "frmEmulationConfig";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Emulation Settings";
-            this.Controls.SetChildIndex(this.baseConfigPanel, 0);
-            this.Controls.SetChildIndex(this.tabMain, 0);
-            this.tabMain.ResumeLayout(false);
-            this.tpgGeneral.ResumeLayout(false);
-            this.tpgGeneral.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.flowLayoutPanel5.PerformLayout();
-            this.flowLayoutPanel9.ResumeLayout(false);
-            this.flowLayoutPanel9.PerformLayout();
-            this.flowLayoutPanel6.ResumeLayout(false);
-            this.flowLayoutPanel6.PerformLayout();
-            this.flowLayoutPanel10.ResumeLayout(false);
-            this.flowLayoutPanel10.PerformLayout();
-            this.tpgAdvanced.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tpgOverclocking.ResumeLayout(false);
-            this.tpgOverclocking.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHint)).EndInit();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.flowLayoutPanel4.PerformLayout();
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel3.PerformLayout();
-            this.grpPpuTiming.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
-            this.flowLayoutPanel7.ResumeLayout(false);
-            this.flowLayoutPanel7.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.ResumeLayout(false);
+
+			// 
+			// lblExtraScanlinesBeforeNmi
+			// 
+			this.lblExtraScanlinesBeforeNmi.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.lblExtraScanlinesBeforeNmi.AutoSize = true;
+			this.lblExtraScanlinesBeforeNmi.Location = new System.Drawing.Point(3, 7);
+			this.lblExtraScanlinesBeforeNmi.Name = "lblExtraScanlinesBeforeNmi";
+			this.lblExtraScanlinesBeforeNmi.Size = new System.Drawing.Size(159, 13);
+			this.lblExtraScanlinesBeforeNmi.TabIndex = 0;
+			this.lblExtraScanlinesBeforeNmi.Text = "Additional scanlines before NMI:";
+			// 
+			// lblExtraScanlinesAfterNmi
+			// 
+			this.lblExtraScanlinesAfterNmi.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.lblExtraScanlinesAfterNmi.AutoSize = true;
+			this.lblExtraScanlinesAfterNmi.Location = new System.Drawing.Point(3, 34);
+			this.lblExtraScanlinesAfterNmi.Name = "lblExtraScanlinesAfterNmi";
+			this.lblExtraScanlinesAfterNmi.Size = new System.Drawing.Size(150, 13);
+			this.lblExtraScanlinesAfterNmi.TabIndex = 1;
+			this.lblExtraScanlinesAfterNmi.Text = "Additional scanlines after NMI:";
+			// 
+			// flowLayoutPanel2
+			// 
+			this.flowLayoutPanel2.Controls.Add(this.lblEffectiveClockRate);
+			this.flowLayoutPanel2.Controls.Add(this.lblEffectiveClockRateValue);
+			this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 118);
+			this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+			this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+			this.flowLayoutPanel2.Size = new System.Drawing.Size(519, 17);
+			this.flowLayoutPanel2.TabIndex = 8;
+			// 
+			// lblEffectiveClockRate
+			// 
+			this.lblEffectiveClockRate.AutoSize = true;
+			this.lblEffectiveClockRate.Location = new System.Drawing.Point(3, 0);
+			this.lblEffectiveClockRate.Name = "lblEffectiveClockRate";
+			this.lblEffectiveClockRate.Size = new System.Drawing.Size(146, 13);
+			this.lblEffectiveClockRate.TabIndex = 0;
+			this.lblEffectiveClockRate.Text = "Effective Clock Rate (NTSC):";
+			// 
+			// lblEffectiveClockRateValue
+			// 
+			this.lblEffectiveClockRateValue.AutoSize = true;
+			this.lblEffectiveClockRateValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblEffectiveClockRateValue.Location = new System.Drawing.Point(155, 0);
+			this.lblEffectiveClockRateValue.Name = "lblEffectiveClockRateValue";
+			this.lblEffectiveClockRateValue.Size = new System.Drawing.Size(37, 13);
+			this.lblEffectiveClockRateValue.TabIndex = 1;
+			this.lblEffectiveClockRateValue.Text = "100%";
+			// 
+			// flowLayoutPanel7
+			// 
+			this.flowLayoutPanel7.Controls.Add(this.chkShowLagCounter);
+			this.flowLayoutPanel7.Controls.Add(this.btnResetLagCounter);
+			this.flowLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.flowLayoutPanel7.Location = new System.Drawing.Point(0, 172);
+			this.flowLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
+			this.flowLayoutPanel7.Name = "flowLayoutPanel7";
+			this.flowLayoutPanel7.Size = new System.Drawing.Size(519, 204);
+			this.flowLayoutPanel7.TabIndex = 12;
+			// 
+			// chkShowLagCounter
+			// 
+			this.chkShowLagCounter.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.chkShowLagCounter.AutoSize = true;
+			this.chkShowLagCounter.Location = new System.Drawing.Point(3, 6);
+			this.chkShowLagCounter.Name = "chkShowLagCounter";
+			this.chkShowLagCounter.Size = new System.Drawing.Size(114, 17);
+			this.chkShowLagCounter.TabIndex = 13;
+			this.chkShowLagCounter.Text = "Show Lag Counter";
+			this.chkShowLagCounter.UseVisualStyleBackColor = true;
+			// 
+			// btnResetLagCounter
+			// 
+			this.btnResetLagCounter.AutoSize = true;
+			this.btnResetLagCounter.Location = new System.Drawing.Point(123, 3);
+			this.btnResetLagCounter.Name = "btnResetLagCounter";
+			this.btnResetLagCounter.Size = new System.Drawing.Size(85, 23);
+			this.btnResetLagCounter.TabIndex = 14;
+			this.btnResetLagCounter.Text = "Reset Counter";
+			this.btnResetLagCounter.UseVisualStyleBackColor = true;
+			this.btnResetLagCounter.Click += new System.EventHandler(this.btnResetLagCounter_Click);
+			// 
+			// tmrUpdateClockRate
+			// 
+			this.tmrUpdateClockRate.Enabled = true;
+			this.tmrUpdateClockRate.Tick += new System.EventHandler(this.tmrUpdateClockRate_Tick);
+			// 
+			// frmEmulationConfig
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoSize = true;
+			this.ClientSize = new System.Drawing.Size(533, 437);
+			this.Controls.Add(this.tabMain);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
+			this.MinimumSize = new System.Drawing.Size(503, 367);
+			this.Name = "frmEmulationConfig";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+			this.Text = "Emulation Settings";
+			this.Controls.SetChildIndex(this.baseConfigPanel, 0);
+			this.Controls.SetChildIndex(this.tabMain, 0);
+			this.tabMain.ResumeLayout(false);
+			this.tpgGeneral.ResumeLayout(false);
+			this.tpgGeneral.PerformLayout();
+			this.tableLayoutPanel4.ResumeLayout(false);
+			this.tableLayoutPanel4.PerformLayout();
+			this.flowLayoutPanel9.ResumeLayout(false);
+			this.flowLayoutPanel9.PerformLayout();
+			this.flowLayoutPanel6.ResumeLayout(false);
+			this.flowLayoutPanel6.PerformLayout();
+			this.flowLayoutPanel10.ResumeLayout(false);
+			this.flowLayoutPanel10.PerformLayout();
+			this.tpgAdvanced.ResumeLayout(false);
+			this.tableLayoutPanel1.ResumeLayout(false);
+			this.tableLayoutPanel1.PerformLayout();
+			this.tableLayoutPanel2.ResumeLayout(false);
+			this.tableLayoutPanel2.PerformLayout();
+			this.tpgOverclocking.ResumeLayout(false);
+			this.tpgOverclocking.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.picHint)).EndInit();
+			this.tableLayoutPanel3.ResumeLayout(false);
+			this.flowLayoutPanel4.ResumeLayout(false);
+			this.flowLayoutPanel4.PerformLayout();
+			this.flowLayoutPanel3.ResumeLayout(false);
+			this.flowLayoutPanel3.PerformLayout();
+			this.grpPpuTiming.ResumeLayout(false);
+			this.tableLayoutPanel5.ResumeLayout(false);
+			this.tableLayoutPanel5.PerformLayout();
+			this.flowLayoutPanel2.ResumeLayout(false);
+			this.flowLayoutPanel2.PerformLayout();
+			this.flowLayoutPanel7.ResumeLayout(false);
+			this.flowLayoutPanel7.PerformLayout();
+			this.ResumeLayout(false);
 
 		}
 
@@ -1087,10 +1002,6 @@ namespace Mesen.GUI.Forms.Config
 		private ctrlRiskyOption chkRandomizeCpuPpuAlignment;
 		private ctrlRiskyOption chkEnablePpu2000ScrollGlitch;
 		private ctrlRiskyOption chkEnablePpu2006ScrollGlitch;
-	  private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-	  private MesenNumericUpDown nudRunAheadFrames;
-	  private System.Windows.Forms.Label lblRunAheadFrames;
-	  private System.Windows.Forms.Label lblRunAhead;
 	  private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
    }
 }

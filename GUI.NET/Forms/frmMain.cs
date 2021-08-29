@@ -1141,7 +1141,6 @@ namespace Mesen.GUI.Forms
 					this.BeginInvoke((MethodInvoker)(() => this.UpdateMenus()));
 				} else {
 					bool running = _emuThread != null;
-					bool runAheadEnabled = ConfigManager.Config.EmulationInfo.RunAheadFrames > 0;
 
 					panelInfo.Visible = !running;
 
@@ -1260,9 +1259,9 @@ namespace Mesen.GUI.Forms
 					mnuInstallHdPack.Enabled = running;
 					mnuHdPackEditor.Enabled = !netPlay && running;
 
-					mnuNetPlay.Enabled = !InteropEmu.IsNsf() && !runAheadEnabled;
+					mnuNetPlay.Enabled = !InteropEmu.IsNsf();
 
-					bool enableMovies = (!running || !InteropEmu.IsNsf()) && !runAheadEnabled;
+					bool enableMovies = (!running || !InteropEmu.IsNsf());
 					mnuMovies.Enabled = mnuPlayMovie.Enabled = mnuStopMovie.Enabled = mnuRecordMovie.Enabled = enableMovies;
 
 					mnuRegionAuto.Checked = ConfigManager.Config.Region == NesModel.Auto;
