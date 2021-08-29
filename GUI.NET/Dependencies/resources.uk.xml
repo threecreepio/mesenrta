@@ -370,7 +370,7 @@
 
 			<Control ID="chkAutoLoadIps">Завантажувати файли IPS/BPS автоматично</Control>
 			<Control ID="chkHidePauseOverlay">Не відображати екран паузи</Control>
-			<Control ID="chkDisplayMovieIcons">Відображати значок відтворення/запису при відтворенні або запису відео</Control>
+			<Control ID="chkDisplayMovieIcons">Відображення значка записи під час запису фільму</Control>
 			<Control ID="btnOpenMesenFolder">Відкрити папку Mesen</Control>
 			<Control ID="btnResetSettings">Скинути конфігурацію</Control>
 

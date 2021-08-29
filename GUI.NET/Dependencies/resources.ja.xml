@@ -370,7 +370,7 @@
 
 			<Control ID="chkAutoLoadIps">自動的にパッチファイル（IPS・BPS）をロードする</Control>
 			<Control ID="chkHidePauseOverlay">ポーズ画面を隠す</Control>
-			<Control ID="chkDisplayMovieIcons">動画の録画や再生の際、アイコンを表示する</Control>
+			<Control ID="chkDisplayMovieIcons">ビデオを録画するときにアイコンを表示する</Control>
 			<Control ID="btnOpenMesenFolder">Mesenのフォルダを開く</Control>
 			<Control ID="btnResetSettings">初期化</Control>
 

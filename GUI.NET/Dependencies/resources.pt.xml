@@ -373,7 +373,7 @@
 			<Control ID="chkPauseWhenInBackground">Segundo plano</Control>
 			<Control ID="chkAutoLoadIps">Carregar os arquivos IPS/BPS automaticamente</Control>
 			<Control ID="chkHidePauseOverlay">Ocultar a tela de pausa</Control>
-			<Control ID="chkDisplayMovieIcons">Exibir ícone de reprodução/gravação ao reproduzir ou gravar um filme</Control>
+			<Control ID="chkDisplayMovieIcons">Exibir ícone de gravação ao gravar um filme</Control>
 			<Control ID="btnOpenMesenFolder">Abrir a pasta do Mesen</Control>
 			<Control ID="btnResetSettings">Restaurar todas as configurações</Control>
 

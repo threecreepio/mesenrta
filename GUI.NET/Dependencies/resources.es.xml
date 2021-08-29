@@ -370,7 +370,7 @@
 
 			<Control ID="chkAutoLoadIps">Cargar los parches IPS/BPS automáticamente</Control>
 			<Control ID="chkHidePauseOverlay">Ocultar la pantalla de pausa</Control>
-			<Control ID="chkDisplayMovieIcons">Mostrar icono de iniciar/grabar al reproducir o grabar un video</Control>
+			<Control ID="chkDisplayMovieIcons">Muestra un icono al grabar una película</Control>
 			<Control ID="btnOpenMesenFolder">Abrir el directorio de Mesen</Control>
 			<Control ID="btnResetSettings">Restablecer todo</Control>
 

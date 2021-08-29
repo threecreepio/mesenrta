@@ -370,7 +370,7 @@
 
 			<Control ID="chkAutoLoadIps">Автоматически загружать IPS/BPS</Control>
 			<Control ID="chkHidePauseOverlay">Спрятать экран паузы</Control>
-			<Control ID="chkDisplayMovieIcons">Отображать проиграть/записывать иконку когда играешь или записываешь фильм</Control>
+			<Control ID="chkDisplayMovieIcons">Отображение значка записи при записи фильма</Control>
 			<Control ID="btnOpenMesenFolder">Открыть папку Mesen</Control>
 			<Control ID="btnResetSettings">Сброс всех настроек</Control>
 

@@ -373,7 +373,7 @@
 			<Control ID="chkPauseWhenInBackground">Background</Control>
 			<Control ID="chkAutoLoadIps">Carica automaticamente patch IPS/BPS</Control>
 			<Control ID="chkHidePauseOverlay">Nascondi la schermata di pausa</Control>
-			<Control ID="chkDisplayMovieIcons">Mostra icone play/registra quando visualizzi o registri un video</Control>
+			<Control ID="chkDisplayMovieIcons">Mostra icone registra quando registri un video</Control>
 			<Control ID="btnOpenMesenFolder">Apri Cartella di Mesen</Control>
 			<Control ID="btnResetSettings">Resetta tutte le Impostazioni</Control>
 
