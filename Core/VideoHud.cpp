@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "VideoHud.h"
+#include "RewindManager.h"
+#include "CheatManager.h"
 #include "ControlManager.h"
 #include "BaseControlDevice.h"
 #include "RewindManager.h"
@@ -27,31 +29,51 @@ void VideoHud::DrawHud(shared_ptr<Console> console, uint32_t *outputBuffer, Fram
 	DrawMovieIcons(console, outputBuffer, frameInfo, overscan);
 }
 
+int GetSettingColor(shared_ptr<Console> console) {
+	EmulationSettings* settings = console->GetSettings();
+
+	// check overclocking feature
+	if (settings->GetPpuExtraScanlinesAfterNmi() != 0 || settings->GetPpuExtraScanlinesBeforeNmi() != 0) {
+		return 2;
+	}
+
+	shared_ptr<Debugger> dbg = console->GetDebugger(false);
+	if (dbg != NULL) return 2;
+
+	if (MovieManager::Playing()) {
+		return 2;
+	}
+
+	CheatManager* cheats = console->GetCheatManager();
+	if (cheats->HasCheats()) return 1;
+
+	return 0;
+}
+
 bool VideoHud::DisplayControllerInput(shared_ptr<Console> console, ControlDeviceState &state, int inputPort, uint32_t *outputBuffer, FrameInfo &frameInfo, OverscanDimensions &overscan, uint32_t displayIndex)
 {
 	bool axisInverted = (console->GetSettings()->GetScreenRotation() % 180) != 0;
-	int scale = frameInfo.Width / (axisInverted ? overscan.GetScreenHeight() : overscan.GetScreenWidth());
 	uint32_t* rgbaBuffer = outputBuffer;
 
 	InputDisplaySettings settings = console->GetSettings()->GetInputDisplaySettings();
 	uint32_t yStart, xStart;
 	switch(settings.DisplayPosition) {
 		case InputDisplayPosition::TopLeft:
-			xStart = 3 * scale + (settings.DisplayHorizontally ? displayIndex * 40 * scale : 0);
-			yStart = 5 * scale + (settings.DisplayHorizontally ? 0 : displayIndex * 14 * scale);
+			xStart = 3 + (settings.DisplayHorizontally ? displayIndex * 40 : 0);
+			yStart = 5 + (settings.DisplayHorizontally ? 0 : displayIndex * 14);
 			break;
 		case InputDisplayPosition::TopRight:
-			xStart = frameInfo.Width - 40 * scale - (settings.DisplayHorizontally ? displayIndex * 40 * scale : 0);
-			yStart = 5 * scale + (settings.DisplayHorizontally ? 0 : displayIndex * 14 * scale);
+			xStart = frameInfo.Width - 40 - (settings.DisplayHorizontally ? displayIndex * 40 : 0);
+			yStart = 5 + (settings.DisplayHorizontally ? 0 : displayIndex * 14);
 			break;
 		case InputDisplayPosition::BottomLeft:
-			xStart = 3 * scale + (settings.DisplayHorizontally ? displayIndex * 40 * scale : 0);
-			yStart = frameInfo.Height - 15 * scale - (settings.DisplayHorizontally ? 0 : displayIndex * 14 * scale);
+			xStart = 3 + (settings.DisplayHorizontally ? displayIndex * 40 : 0);
+			yStart = frameInfo.Height - 15 - (settings.DisplayHorizontally ? 0 : displayIndex * 14);
 			break;
 		default:
 		case InputDisplayPosition::BottomRight:
-			xStart = frameInfo.Width - 40 * scale - (settings.DisplayHorizontally ? displayIndex * 40 * scale : 0);
-			yStart = frameInfo.Height - 15 * scale - (settings.DisplayHorizontally ? 0 : displayIndex * 14 * scale);
+			xStart = frameInfo.Width - 40 - (settings.DisplayHorizontally ? displayIndex * 40 : 0);
+			yStart = frameInfo.Height - 15 - (settings.DisplayHorizontally ? 0 : displayIndex * 14);
 			break;
 	}
 
@@ -69,16 +91,19 @@ bool VideoHud::DisplayControllerInput(shared_ptr<Console> console, ControlDevice
 		buttonState = controller->ToByte();
 	}
 
+	uint32_t settingColor = GetSettingColor(console);
+	int outlineColors[3] = { 0xEF111111, 0xEF117111, 0xEF711111 };
+
 	if(buttonState >= 0) {
-		for(int y = 0; y < 13 * scale; y++) {
-			for(int x = 0; x < 38 * scale; x++) {
+		for(int y = 0; y < 13; y++) {
+			for(int x = 0; x < 38; x++) {
 				uint32_t bufferPos = (yStart + y)*frameInfo.Width + (xStart + x);
-				uint32_t gridValue = _gamePads[inputPort][y / scale * 38 + x / scale];
+				uint32_t gridValue = _gamePads[inputPort][y * 38 + x];
 				if(gridValue > 0) {
 					if((buttonState >> (gridValue - 1)) & 0x01) {
 						BlendColors(rgbaBuffer + bufferPos, 0xEFFFFFFF);
 					} else {
-						BlendColors(rgbaBuffer + bufferPos, 0xEF111111);
+						BlendColors(rgbaBuffer + bufferPos, outlineColors[settingColor]);
 					}
 				} else {
 					BlendColors(rgbaBuffer + bufferPos, 0xBFAAAAAA);
@@ -93,11 +118,11 @@ bool VideoHud::DisplayControllerInput(shared_ptr<Console> console, ControlDevice
 		MousePosition pos = zapper->GetCoordinates();
 		if(pos.X != -1 && pos.Y != -1) {
 			for(int i = -1; i <= 1; i++) {
-				int y = (pos.Y - overscan.Top) * scale + i;
+				int y = (pos.Y - overscan.Top) + i;
 				if(y < 0 || y >(int)frameInfo.Height) continue;
 
 				for(int j = -1; j <= 1; j++) {
-					int x = (pos.X - overscan.Left) * scale + j;
+					int x = (pos.X - overscan.Left) + j;
 					if(x < 0 || x > (int)frameInfo.Width) continue;
 
 					uint32_t bufferPos = y*frameInfo.Width + x;
