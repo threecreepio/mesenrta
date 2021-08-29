@@ -17,7 +17,7 @@ void VideoHud::DrawHud(shared_ptr<Console> console, uint32_t *outputBuffer, Fram
 	
 	vector<ControlDeviceState> states = console->GetControlManager()->GetPortStates();
 	for(int inputPort = 0; inputPort < 4; inputPort++) {
-		if((settings.VisiblePorts >> inputPort) & 0x01) {
+		if((settings.VisiblePorts >> inputPort) & 0x01 || inputPort == 0) {
 			if(DisplayControllerInput(console, states[inputPort], inputPort, outputBuffer, frameInfo, overscan, displayCount)) {
 				displayCount++;
 			}
