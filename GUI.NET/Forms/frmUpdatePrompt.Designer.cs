@@ -40,13 +40,10 @@
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.btnUpdate = new System.Windows.Forms.Button();
 			this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-			this.picDonate = new System.Windows.Forms.PictureBox();
-			this.lblDonate = new System.Windows.Forms.Label();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			this.flowLayoutPanel1.SuspendLayout();
 			this.flowLayoutPanel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.picDonate)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tableLayoutPanel1
@@ -188,8 +185,6 @@
 			// 
 			// flowLayoutPanel2
 			// 
-			this.flowLayoutPanel2.Controls.Add(this.picDonate);
-			this.flowLayoutPanel2.Controls.Add(this.lblDonate);
 			this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
 			this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
@@ -197,30 +192,6 @@
 			this.flowLayoutPanel2.Size = new System.Drawing.Size(520, 31);
 			this.flowLayoutPanel2.TabIndex = 9;
 			this.flowLayoutPanel2.WrapContents = false;
-			// 
-			// picDonate
-			// 
-			this.picDonate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.picDonate.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.picDonate.Image = ((System.Drawing.Image)(resources.GetObject("picDonate.Image")));
-			this.picDonate.Location = new System.Drawing.Point(3, 3);
-			this.picDonate.Name = "picDonate";
-			this.picDonate.Size = new System.Drawing.Size(78, 22);
-			this.picDonate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-			this.picDonate.TabIndex = 0;
-			this.picDonate.TabStop = false;
-			this.picDonate.Click += new System.EventHandler(this.picDonate_Click);
-			// 
-			// lblDonate
-			// 
-			this.lblDonate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.lblDonate.AutoSize = true;
-			this.lblDonate.Location = new System.Drawing.Point(84, 7);
-			this.lblDonate.Margin = new System.Windows.Forms.Padding(0);
-			this.lblDonate.Name = "lblDonate";
-			this.lblDonate.Size = new System.Drawing.Size(331, 13);
-			this.lblDonate.TabIndex = 1;
-			this.lblDonate.Text = "If you want to support Mesen, please consider donating.  Thank you!";
 			// 
 			// frmUpdatePrompt
 			// 
@@ -243,7 +214,6 @@
 			this.flowLayoutPanel1.ResumeLayout(false);
 			this.flowLayoutPanel2.ResumeLayout(false);
 			this.flowLayoutPanel2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.picDonate)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -262,7 +232,5 @@
 		private System.Windows.Forms.Button btnUpdate;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-		private System.Windows.Forms.PictureBox picDonate;
-		private System.Windows.Forms.Label lblDonate;
 	}
 }

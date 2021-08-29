@@ -47,7 +47,9 @@ namespace Mesen.GUI.Forms
 			DialogResult result = System.Windows.Forms.DialogResult.None;
 	
 			Task.Run(() => {
-				using(var client = new WebClient()) {
+				using(var client = new WebClient())
+				{
+					client.Headers.Add("User-Agent", "Mesen Updater");
 					client.DownloadProgressChanged += (object s, DownloadProgressChangedEventArgs args) => {
 						this.BeginInvoke((Action)(() => {
 							lblFilename.Text = string.Format("{0} ({1:0.00}Mb)", _link, (double)args.TotalBytesToReceive/1024/1024);

@@ -222,7 +222,6 @@ namespace Mesen.GUI.Forms
 			UpdateVideoSettings();
 
 			InitializeCore();
-			PerformUpgrade();
 			InitializeEmu();
 
 			TopMost = ConfigManager.Config.PreferenceInfo.AlwaysOnTop;
