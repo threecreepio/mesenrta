@@ -425,9 +425,7 @@ bool Console::Initialize(VirtualFile &romFile, VirtualFile &patchFile, bool forP
 
 			if(IsMaster()) {
 				if(!forPowerCycle) {
-					string modelName = _model == NesModel::PAL ? "PAL" : (_model == NesModel::Dendy ? "Dendy" : "NTSC");
-					string messageTitle = MessageManager::Localize("GameLoaded") + " (" + modelName + ")";
-					MessageManager::DisplayMessage(messageTitle, FolderUtilities::GetFilename(GetRomInfo().RomName, false));
+					ShowResetStatus(2);
 				}
 
 				_settings->ClearFlags(EmulationFlags::ForceMaxSpeed);
@@ -585,10 +583,24 @@ void Console::ReloadRom(bool forPowerCycle)
 	}
 }
 
+void Console::ShowResetStatus(int resetType) {
+	std::string version = GetSettings()->GetMesenVersionString();
+	std::string resetTypeMsg[3] = { "Reset", "HardReset", "GameLoaded" };
+	string modelName = _model == NesModel::PAL ? "PAL" : (_model == NesModel::Dendy ? "Dendy" : "NTSC");
+	string messageTitle = version + " " + modelName + " " + MessageManager::Localize(resetTypeMsg[resetType]);
+
+	MessageManager::DisplayMessage(messageTitle,GetRomInfo().Hash.Sha1);
+	if (resetType == 0) {
+		std::vector cheats = GetCheatManager()->GetCheats();
+		GetCheatManager()->SetCheats(cheats);
+	}
+}
+
 void Console::Reset(bool softReset)
 {
 	if(_initialized) {
 		bool needSuspend = softReset ? _systemActionManager->Reset() : _systemActionManager->PowerCycle();
+		ShowResetStatus(softReset ? 0 : 1);
 
 		if(needSuspend) {
 			//Only do this if a reset/power cycle is not already pending - otherwise we'll end up calling Suspend() too many times

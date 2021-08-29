@@ -10,6 +10,8 @@ std::unordered_map<string, string> MessageManager::_enResources = {
 	{ "Error", u8"Error" },
 	{ "GameInfo", u8"Game Info" },
 	{ "GameLoaded", u8"Game loaded" },
+	{ "Reset", u8"Reset" },
+	{ "HardReset", u8"Power" },
 	{ "Input", u8"Input" },
 	{ "Patch", u8"Patch" },
 	{ "Movies", u8"Movies" },
