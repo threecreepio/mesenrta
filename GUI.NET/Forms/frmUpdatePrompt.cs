@@ -17,18 +17,15 @@ namespace Mesen.GUI.Forms
 {
 	public partial class frmUpdatePrompt : BaseForm
 	{
-		private string _fileHash;
-		private string _donateText;
+		private string _downloadUrl;
 
-		public frmUpdatePrompt(Version currentVersion, Version latestVersion, string changeLog, string fileHash, string donateText)
+		public frmUpdatePrompt(Version currentVersion, Version latestVersion, string changeLog, string downloadUrl)
 		{
 			InitializeComponent();
 
-			_donateText = donateText;
-
 			this.txtChangelog.Font = new System.Drawing.Font(BaseControl.MonospaceFontFamily, 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
-			_fileHash = fileHash;
+			_downloadUrl = downloadUrl;
 
 			lblCurrentVersionString.Text = currentVersion.ToString();
 			lblLatestVersionString.Text = latestVersion.ToString();
@@ -38,17 +35,6 @@ namespace Mesen.GUI.Forms
 		protected override void OnLoad(EventArgs e)
 		{
 			base.OnLoad(e);
-
-			if(_donateText != null) {
-				if(!string.IsNullOrEmpty(_donateText)) {
-					this.lblDonate.Text = _donateText;
-				}
-				this.lblDonate.Visible = true;
-				this.picDonate.Visible = true;
-			} else {
-				this.lblDonate.Visible = false;
-				this.picDonate.Visible = false;
-			}
 
 			btnUpdate.Focus();
 		}
@@ -60,23 +46,23 @@ namespace Mesen.GUI.Forms
 			this.DialogResult = DialogResult.Cancel;
 			this.Close();
 #else
-			string destFilePath = System.Reflection.Assembly.GetEntryAssembly().Location;
-			string srcFilePath = Path.Combine(ConfigManager.DownloadFolder, "Mesen." + lblLatestVersionString.Text + ".exe");
-			string backupFilePath = Path.Combine(ConfigManager.BackupFolder, "Mesen." + lblCurrentVersionString.Text + ".exe");
+			string destFilePath = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
+			string srcFilePath = Path.Combine(ConfigManager.DownloadFolder, "Mesen." + lblLatestVersionString.Text + ".zip");
+			//string backupFilePath = Path.Combine(ConfigManager.BackupFolder, "Mesen." + lblCurrentVersionString.Text + ".exe");
 			string updateHelper = Path.Combine(ConfigManager.HomeFolder, "MesenUpdater.exe");
 
 			if(!File.Exists(updateHelper)) {
 				MesenMsgBox.Show("UpdaterNotFound", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				DialogResult = DialogResult.Cancel;
 			} else if(!string.IsNullOrWhiteSpace(srcFilePath)) {
-				frmDownloadProgress frmDownload = new frmDownloadProgress("http://www.mesen.ca/Services/GetLatestVersion.php?a=download&p=win&v=" + InteropEmu.GetMesenVersion(), srcFilePath);
+				frmDownloadProgress frmDownload = new frmDownloadProgress(_downloadUrl, srcFilePath);
 				if(frmDownload.ShowDialog() == DialogResult.OK) {
 					FileInfo fileInfo = new FileInfo(srcFilePath);
-					if(fileInfo.Length > 0 && ResourceManager.GetSha1Hash(File.ReadAllBytes(srcFilePath)) == _fileHash) {
+					if(fileInfo.Length > 0) {
 						if(Program.IsMono) {
-							Process.Start("mono", string.Format("\"{0}\" \"{1}\" \"{2}\" \"{3}\"", updateHelper, srcFilePath, destFilePath, backupFilePath));
+							Process.Start("mono", string.Format("\"{0}\" \"{1}\" \"{2}\"", updateHelper, srcFilePath, destFilePath));
 						} else {
-							Process.Start(updateHelper, string.Format("\"{0}\" \"{1}\" \"{2}\"", srcFilePath, destFilePath, backupFilePath));
+							Process.Start(updateHelper, string.Format("\"{0}\" \"{1}\"", srcFilePath, destFilePath));
 						}
 					} else {
 						//Download failed, mismatching hashes
@@ -86,11 +72,6 @@ namespace Mesen.GUI.Forms
 				}
 			}
 #endif
-		}
-
-		private void picDonate_Click(object sender, EventArgs e)
-		{
-			Process.Start("http://www.mesen.ca/Donate.php?l=" + ResourceHelper.GetLanguageCode());
 		}
 	}
 }
