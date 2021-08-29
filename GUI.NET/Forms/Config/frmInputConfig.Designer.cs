@@ -518,6 +518,9 @@
 			// chkDisplayPort1
 			// 
 			this.chkDisplayPort1.AutoSize = true;
+			this.chkDisplayPort1.Checked = true;
+			this.chkDisplayPort1.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.chkDisplayPort1.Enabled = false;
 			this.chkDisplayPort1.Location = new System.Drawing.Point(3, 3);
 			this.chkDisplayPort1.Name = "chkDisplayPort1";
 			this.chkDisplayPort1.Size = new System.Drawing.Size(54, 17);
@@ -675,6 +678,7 @@
 			this.AutoSize = true;
 			this.ClientSize = new System.Drawing.Size(370, 271);
 			this.Controls.Add(this.tabMain);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
