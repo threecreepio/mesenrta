@@ -6,7 +6,7 @@
 //Version 0.0.1
 uint16_t EmulationSettings::_versionMajor = 0;
 uint8_t EmulationSettings::_versionMinor = 0;
-uint8_t EmulationSettings::_versionRevision = 1;
+uint8_t EmulationSettings::_versionRevision = 2;
 
 SimpleLock EmulationSettings::_lock;
 SimpleLock EmulationSettings::_shortcutLock;
