@@ -2,6 +2,7 @@
 #include "VideoHud.h"
 #include "ControlManager.h"
 #include "BaseControlDevice.h"
+#include "RewindManager.h"
 #include "ControlDeviceState.h"
 #include "StandardController.h"
 #include "FourScore.h"
@@ -109,41 +110,102 @@ bool VideoHud::DisplayControllerInput(shared_ptr<Console> console, ControlDevice
 	return false;
 }
 
+
+
+const vector<uint32_t> _ffwdIcon = {
+	3,3,3,0,0,3,3,3,0,0,0,0,0,0,0,0,0,
+	3,1,1,3,3,3,1,1,3,3,0,0,0,0,0,0,0,
+	3,1,2,1,1,3,1,2,1,1,3,3,0,0,0,0,0,
+	3,1,2,2,2,3,1,2,2,2,1,1,3,3,0,0,0,
+	3,1,2,2,2,3,1,2,2,2,2,2,1,1,3,0,0,
+	3,1,2,2,2,3,1,2,2,2,2,2,2,2,1,3,0,
+	3,1,2,2,2,3,1,2,2,2,2,2,2,2,1,3,0,
+	3,1,2,2,2,3,1,2,2,2,2,2,1,1,3,0,0,
+	3,1,2,2,2,3,1,2,2,2,1,1,3,3,0,0,0,
+	3,1,2,1,1,3,1,2,1,1,3,3,0,0,0,0,0,
+	3,1,1,3,3,3,1,1,3,3,0,0,0,0,0,0,0,
+	3,3,3,0,0,3,3,3,0,0,0,0,0,0,0,0,0,
+};
+
+const vector<uint32_t> _rewindIcon = {
+	0,0,0,0,0,0,0,0,0,3,3,3,0,0,3,3,3,
+	0,0,0,0,0,0,0,3,3,1,1,3,3,3,1,1,3,
+	0,0,0,0,0,3,3,1,1,2,1,3,1,1,2,1,3,
+	0,0,0,3,3,1,1,2,2,2,1,3,2,2,2,1,3,
+	0,0,3,1,1,2,2,2,2,2,1,3,2,2,2,1,3,
+	0,3,1,2,2,2,2,2,2,2,1,3,2,2,2,1,3,
+	0,3,1,2,2,2,2,2,2,2,1,3,2,2,2,1,3,
+	0,0,3,1,1,2,2,2,2,2,1,3,2,2,2,1,3,
+	0,0,0,3,3,1,1,2,2,2,1,3,2,2,2,1,3,
+	0,0,0,0,0,3,3,1,1,2,1,3,1,1,2,1,3,
+	0,0,0,0,0,0,0,3,3,1,1,3,3,3,1,1,3,
+	0,0,0,0,0,0,0,0,0,3,3,3,0,0,3,3,3,
+};
+
+
 void VideoHud::DrawMovieIcons(shared_ptr<Console> console, uint32_t *outputBuffer, FrameInfo &frameInfo, OverscanDimensions &overscan)
 {
-	if(console->GetSettings()->CheckFlag(EmulationFlags::DisplayMovieIcons) && (MovieManager::Playing() || MovieManager::Recording())) {
-		InputDisplaySettings settings = console->GetSettings()->GetInputDisplaySettings();
-		uint32_t xOffset = settings.VisiblePorts > 0 && settings.DisplayPosition == InputDisplayPosition::TopRight ? 50 : 27;
-		uint32_t* rgbaBuffer = (uint32_t*)outputBuffer;
-		int scale = frameInfo.Width / overscan.GetScreenWidth();
-		uint32_t yStart = 15 * scale;
-		uint32_t xStart = (frameInfo.Width - xOffset) * scale;
-		if(MovieManager::Playing()) {
-			for(int y = 0; y < 12 * scale; y++) {
-				for(int x = 0; x < 12 * scale; x++) {
-					uint32_t bufferPos = (yStart + y)*frameInfo.Width + (xStart + x);
-					uint32_t gridValue = _playIcon[y / scale * 12 + x / scale];
-					if(gridValue == 1) {
-						BlendColors(rgbaBuffer + bufferPos, 0xEF00CF00);
-					} else if(gridValue == 2) {
-						BlendColors(rgbaBuffer + bufferPos, 0xEF009F00);
-					} else if(gridValue == 3) {
-						BlendColors(rgbaBuffer + bufferPos, 0xEF000000);
-					}
+	InputDisplaySettings settings = console->GetSettings()->GetInputDisplaySettings();
+	uint32_t xOffset = settings.VisiblePorts > 0 && settings.DisplayPosition == InputDisplayPosition::TopRight ? 50 : 27;
+	uint32_t* rgbaBuffer = (uint32_t*)outputBuffer;
+	int scale = frameInfo.Width / overscan.GetScreenWidth();
+	uint32_t yStart = 15 * scale;
+	uint32_t xStart = (frameInfo.Width - xOffset) * scale;
+
+	if (MovieManager::Playing()) {
+		for (int y = 0; y < 12 * scale; y++) {
+			for (int x = 0; x < 12 * scale; x++) {
+				uint32_t bufferPos = (yStart + y) * frameInfo.Width + (xStart + x);
+				uint32_t gridValue = _playIcon[y / scale * 12 + x / scale];
+				if (gridValue == 1) {
+					BlendColors(rgbaBuffer + bufferPos, 0xEF00CF00);
+				}
+				else if (gridValue == 2) {
+					BlendColors(rgbaBuffer + bufferPos, 0xEF009F00);
+				}
+				else if (gridValue == 3) {
+					BlendColors(rgbaBuffer + bufferPos, 0xEF000000);
 				}
 			}
-		} else if(MovieManager::Recording()) {
-			for(int y = 0; y < 12 * scale; y++) {
-				for(int x = 0; x < 12 * scale; x++) {
-					uint32_t bufferPos = (yStart + y)*frameInfo.Width + (xStart + x);
-					uint32_t gridValue = _recordIcon[y / scale * 12 + x / scale];
-					if(gridValue == 1) {
-						BlendColors(rgbaBuffer + bufferPos, 0xEFCF0000);
-					} else if(gridValue == 2) {
-						BlendColors(rgbaBuffer + bufferPos, 0xEF9F0000);
-					} else if(gridValue == 3) {
-						BlendColors(rgbaBuffer + bufferPos, 0xEF000000);
-					}
+		}
+	}
+
+	if (console->GetSettings()->CheckFlag(EmulationFlags::DisplayMovieIcons) && MovieManager::Recording()) {
+		for(int y = 0; y < 12 * scale; y++) {
+			for(int x = 0; x < 12 * scale; x++) {
+				uint32_t bufferPos = (yStart + y)*frameInfo.Width + (xStart + x);
+				uint32_t gridValue = _recordIcon[y / scale * 12 + x / scale];
+				if(gridValue == 1) {
+					BlendColors(rgbaBuffer + bufferPos, 0xEFCF0000);
+				} else if(gridValue == 2) {
+					BlendColors(rgbaBuffer + bufferPos, 0xEF9F0000);
+				} else if(gridValue == 3) {
+					BlendColors(rgbaBuffer + bufferPos, 0xEF000000);
+				}
+			}
+		}
+	}
+
+	int ffwd = 0;
+	shared_ptr<RewindManager> rewinder = console->GetRewindManager();
+	uint32_t speed = console->GetSettings()->GetEmulationSpeed();
+	if (speed < 100 || rewinder->IsRewinding()) ffwd = -1;
+	if (speed > 100) ffwd = 1;
+	if (ffwd != 0) {
+		int width = 17;
+		int height = 12;
+		for (int y = 0; y < height * scale; y++) {
+			for (int x = 0; x < width * scale; x++) {
+				uint32_t bufferPos = (yStart + y) * frameInfo.Width + (xStart + x);
+				uint32_t gridValue = (ffwd == 1 ? _ffwdIcon : _rewindIcon)[y / scale * width + x / scale];
+				if (gridValue == 1) {
+					BlendColors(rgbaBuffer + bufferPos, 0xEF00CF00);
+				}
+				else if (gridValue == 2) {
+					BlendColors(rgbaBuffer + bufferPos, 0xEF009F00);
+				}
+				else if (gridValue == 3) {
+					BlendColors(rgbaBuffer + bufferPos, 0xEF000000);
 				}
 			}
 		}

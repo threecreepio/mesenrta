@@ -392,7 +392,7 @@
 			<Control ID="chkPauseInDebugger">调试器</Control>
 			<Control ID="chkAutoLoadIps">自动打 IPS/BPS 补丁</Control>
 			<Control ID="chkHidePauseOverlay">暂停不变暗</Control>
-			<Control ID="chkDisplayMovieIcons">显示影片状态图标</Control>
+			<Control ID="chkDisplayMovieIcons">录制动画时显示录制图标</Control>
 			<Control ID="btnOpenMesenFolder">打开 Mesen 文件夹</Control>
 			<Control ID="btnResetSettings">重置所有设置</Control>
 

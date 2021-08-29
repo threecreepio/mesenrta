@@ -372,7 +372,7 @@
 			<Control ID="chkPauseWhenInBackground">Background</Control>
 			<Control ID="chkAutoLoadIps">Automatically load IPS/BPS patches</Control>
 			<Control ID="chkHidePauseOverlay">Hide the pause screen</Control>
-			<Control ID="chkDisplayMovieIcons">Display play/record icon when playing or recording a movie</Control>
+			<Control ID="chkDisplayMovieIcons">Display record icon when recording a movie</Control>
 			<Control ID="btnOpenMesenFolder">Open Mesen Folder</Control>
 			<Control ID="btnResetSettings">Reset All Settings</Control>
 
