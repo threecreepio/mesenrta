@@ -166,7 +166,7 @@ void DrawSmallFramecounter(shared_ptr<Console> console, uint32_t* rgbaBuffer, Fr
 	}
 
 	uint32_t settingColor = GetSettingColor(console);
-	int outlineColors[3] = { 0xFF111111, 0xFF117111, 0xFF711111 };
+	uint32_t outlineColors[3] = { 0xFF111111, 0xFF117111, 0xFF711111 };
 	int number = console->GetFrameCount();
 	int start = 1;
 	for (int i = 1; i < 6; i += 1) {
@@ -227,7 +227,7 @@ bool VideoHud::DisplayControllerInput(shared_ptr<Console> console, ControlDevice
 	}
 
 	uint32_t settingColor = GetSettingColor(console);
-	int outlineColors[3] = { 0xFF111111, 0xFF117111, 0xFF711111 };
+	uint32_t outlineColors[3] = { 0xFF111111, 0xFF117111, 0xFF711111 };
 
 	if(buttonState >= 0) {
 		for(int y = 0; y < 13; y++) {
