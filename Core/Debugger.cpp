@@ -1062,6 +1062,7 @@ void Debugger::GetState(DebugState *state, bool includeMapperInfo)
 {
 	state->Model = _console->GetModel();
 	state->ClockRate = _cpu->GetClockRate(_console->GetModel());
+	state->LagCount = _console->GetLagCounter();
 	_cpu->GetState(state->CPU);
 	_ppu->GetState(state->PPU);
 	if(includeMapperInfo) {

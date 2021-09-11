@@ -140,6 +140,7 @@ struct DebugState
 	ApuState APU;
 	NesModel Model;
 	uint32_t ClockRate;
+	uint32_t LagCount;
 };
 
 struct InstructionProgress
