@@ -939,6 +939,7 @@ int LuaApi::GetState(lua_State *lua)
 	lua_newtable(lua);
 	lua_pushintvalue(region, state.Model);
 	lua_pushintvalue(clockRate, state.ClockRate);
+	lua_pushintvalue(lagCount, state.LagCount);
 
 	lua_starttable("cpu");
 	lua_pushintvalue(a, state.CPU.A);
