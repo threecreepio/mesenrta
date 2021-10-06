@@ -26,9 +26,9 @@ namespace Mesen.GUI.Config
 			get
 			{
 				if(Program.IsMono) {
-					return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), ".config", "mesen");
+					return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), ".config", "mesenrta");
 				} else {
-					return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Mesen");
+					return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "MesenRTA");
 				}
 			}
 		}
@@ -43,11 +43,11 @@ namespace Mesen.GUI.Config
 		public static void InitHomeFolder()
 		{
 			string portableFolder = DefaultPortableFolder;
-			string legacyPortableFolder = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "Mesen");
+			string legacyPortableFolder = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "MesenRTA");
 			string documentsFolder = DefaultDocumentsFolder;
 			
 			//Linux only
-			string legacyDocumentsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Mesen");
+			string legacyDocumentsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "MesenRTA");
 
 			string portableConfig = Path.Combine(portableFolder, "settings.xml");
 			string legacyPortableConfig = Path.Combine(legacyPortableFolder, "settings.xml");
