@@ -19,12 +19,12 @@ namespace Mesen.GUI.Config
 		public bool DisablePaletteRead = false;
 		public bool DisableOamAddrBug = false;
 		public bool DisablePpuReset = false;
-		public bool EnableOamDecay = false;
+		public bool EnableOamDecay = true;
 		public bool UseNes101Hvc101Behavior = false;
-		public bool EnableMapperRandomPowerOnState = false;
-		public bool RandomizeCpuPpuAlignment = false;
-		public bool EnablePpu2006ScrollGlitch = false;
-		public bool EnablePpu2000ScrollGlitch = false;
+		public bool EnableMapperRandomPowerOnState = true;
+		public bool RandomizeCpuPpuAlignment = true;
+		public bool EnablePpu2006ScrollGlitch = true;
+		public bool EnablePpu2000ScrollGlitch = true;
 
 		public bool UseAlternativeMmc3Irq = false;
 
@@ -33,7 +33,7 @@ namespace Mesen.GUI.Config
 
 		public RamPowerOnState RamPowerOnState;
 
-		public bool ShowLagCounter = false;
+		public bool ShowLagCounter = true;
 
 		[MinMax(0, 5000)] public UInt32 EmulationSpeed = 100;
 		[MinMax(0, 5000)] public UInt32 TurboSpeed = 300;
@@ -51,22 +51,22 @@ namespace Mesen.GUI.Config
 			InteropEmu.SetTurboRewindSpeed(emulationInfo.TurboSpeed, emulationInfo.RewindSpeed);
 
 			InteropEmu.SetFlag(EmulationFlags.Mmc3IrqAltBehavior, emulationInfo.UseAlternativeMmc3Irq);
-			InteropEmu.SetFlag(EmulationFlags.AllowInvalidInput, emulationInfo.AllowInvalidInput);
-			InteropEmu.SetFlag(EmulationFlags.ShowLagCounter, emulationInfo.ShowLagCounter);
+			InteropEmu.SetFlag(EmulationFlags.AllowInvalidInput, false);
+			InteropEmu.SetFlag(EmulationFlags.ShowLagCounter, true);
 			InteropEmu.SetFlag(EmulationFlags.DisablePpu2004Reads, emulationInfo.DisablePpu2004Reads);
 			InteropEmu.SetFlag(EmulationFlags.DisablePaletteRead, emulationInfo.DisablePaletteRead);
 			InteropEmu.SetFlag(EmulationFlags.DisableOamAddrBug, emulationInfo.DisableOamAddrBug);
 			InteropEmu.SetFlag(EmulationFlags.DisablePpuReset, emulationInfo.DisablePpuReset);
-			InteropEmu.SetFlag(EmulationFlags.EnableOamDecay, emulationInfo.EnableOamDecay);
+			InteropEmu.SetFlag(EmulationFlags.EnableOamDecay, true);
 			InteropEmu.SetFlag(EmulationFlags.UseNes101Hvc101Behavior, emulationInfo.UseNes101Hvc101Behavior);
-			InteropEmu.SetFlag(EmulationFlags.RandomizeMapperPowerOnState, emulationInfo.EnableMapperRandomPowerOnState);
-			InteropEmu.SetFlag(EmulationFlags.RandomizeCpuPpuAlignment, emulationInfo.RandomizeCpuPpuAlignment);
-			InteropEmu.SetFlag(EmulationFlags.EnablePpu2000ScrollGlitch, emulationInfo.EnablePpu2000ScrollGlitch);
-			InteropEmu.SetFlag(EmulationFlags.EnablePpu2006ScrollGlitch, emulationInfo.EnablePpu2006ScrollGlitch);
+			InteropEmu.SetFlag(EmulationFlags.RandomizeMapperPowerOnState, true);
+			InteropEmu.SetFlag(EmulationFlags.RandomizeCpuPpuAlignment, true);
+			InteropEmu.SetFlag(EmulationFlags.EnablePpu2000ScrollGlitch, true);
+			InteropEmu.SetFlag(EmulationFlags.EnablePpu2006ScrollGlitch, true);
 
 			InteropEmu.SetPpuNmiConfig(emulationInfo.PpuExtraScanlinesBeforeNmi, emulationInfo.PpuExtraScanlinesAfterNmi);
 
-			InteropEmu.SetRamPowerOnState(emulationInfo.RamPowerOnState);
+			InteropEmu.SetRamPowerOnState(Mesen.GUI.RamPowerOnState.Random);
 		}
 	}
 }

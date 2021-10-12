@@ -402,7 +402,8 @@ namespace Mesen.GUI.Forms.Config
             // chkEnablePpu2000ScrollGlitch
             // 
             this.chkEnablePpu2000ScrollGlitch.AutoSize = true;
-            this.chkEnablePpu2000ScrollGlitch.Checked = false;
+            this.chkEnablePpu2000ScrollGlitch.Checked = true;
+            this.chkEnablePpu2000ScrollGlitch.Enabled = false;
             this.chkEnablePpu2000ScrollGlitch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chkEnablePpu2000ScrollGlitch.Location = new System.Drawing.Point(10, 112);
             this.chkEnablePpu2000ScrollGlitch.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -415,7 +416,8 @@ namespace Mesen.GUI.Forms.Config
             // chkEnablePpu2006ScrollGlitch
             // 
             this.chkEnablePpu2006ScrollGlitch.AutoSize = true;
-            this.chkEnablePpu2006ScrollGlitch.Checked = false;
+            this.chkEnablePpu2006ScrollGlitch.Checked = true;
+            this.chkEnablePpu2006ScrollGlitch.Enabled = false;
             this.chkEnablePpu2006ScrollGlitch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chkEnablePpu2006ScrollGlitch.Location = new System.Drawing.Point(10, 89);
             this.chkEnablePpu2006ScrollGlitch.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -428,7 +430,8 @@ namespace Mesen.GUI.Forms.Config
             // chkRandomizeCpuPpuAlignment
             // 
             this.chkRandomizeCpuPpuAlignment.AutoSize = true;
-            this.chkRandomizeCpuPpuAlignment.Checked = false;
+            this.chkRandomizeCpuPpuAlignment.Checked = true;
+            this.chkRandomizeCpuPpuAlignment.Enabled = false;
             this.chkRandomizeCpuPpuAlignment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chkRandomizeCpuPpuAlignment.Location = new System.Drawing.Point(10, 66);
             this.chkRandomizeCpuPpuAlignment.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -453,7 +456,8 @@ namespace Mesen.GUI.Forms.Config
             // chkMapperRandomPowerOnState
             // 
             this.chkMapperRandomPowerOnState.AutoSize = true;
-            this.chkMapperRandomPowerOnState.Checked = false;
+            this.chkMapperRandomPowerOnState.Checked = true;
+            this.chkMapperRandomPowerOnState.Enabled = false;
             this.chkMapperRandomPowerOnState.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chkMapperRandomPowerOnState.Location = new System.Drawing.Point(10, 43);
             this.chkMapperRandomPowerOnState.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -465,7 +469,8 @@ namespace Mesen.GUI.Forms.Config
             // 
             // chkEnableOamDecay
             // 
-            this.chkEnableOamDecay.Checked = false;
+            this.chkEnableOamDecay.Checked = true;
+            this.chkEnableOamDecay.Enabled = false;
             this.chkEnableOamDecay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chkEnableOamDecay.Location = new System.Drawing.Point(10, 20);
             this.chkEnableOamDecay.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -558,6 +563,7 @@ namespace Mesen.GUI.Forms.Config
             // 
             this.chkAllowInvalidInput.AutoSize = true;
             this.chkAllowInvalidInput.Checked = false;
+            this.chkAllowInvalidInput.Enabled = false;
             this.chkAllowInvalidInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chkAllowInvalidInput.Location = new System.Drawing.Point(10, 319);
             this.chkAllowInvalidInput.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
