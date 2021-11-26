@@ -15,8 +15,7 @@ namespace Mesen.GUI.Config
 		private const int MaxRecentFiles = 10;
 		private bool _needToSave = false;
 
-		public string MesenVersion = InteropEmu.GetMesenVersion();
-
+		public string MesenVersion = "0.0.4";
 		public PreferenceInfo PreferenceInfo;
 		public AudioInfo AudioInfo;
 		public VideoInfo VideoInfo;
