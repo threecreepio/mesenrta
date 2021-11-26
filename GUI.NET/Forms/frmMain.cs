@@ -198,9 +198,6 @@ namespace Mesen.GUI.Forms
 
 			base.OnLoad(e);
 
-#if HIDETESTMENU
-			mnuTests.Visible = false;
-#endif
 			InteropEmu.InitDll();
 
 			_notifListener = new InteropEmu.NotificationListener(InteropEmu.ConsoleId.Master);
@@ -1246,14 +1243,8 @@ namespace Mesen.GUI.Forms
 					mnuOpenSpriteViewer.Enabled = running;
 					mnuOpenPaletteViewer.Enabled = running;
 
-#if !HIDETESTMENU
-					//Keep this option hidden for now, until some remaining issues are fixed.
-					mnuDebugDualSystemSecondaryCpu.Visible = _isDualSystem;
-					sepDebugDualSystemSecondaryCpu.Visible = _isDualSystem;
-#else
 					mnuDebugDualSystemSecondaryCpu.Visible = false;
 					sepDebugDualSystemSecondaryCpu.Visible = false;
-#endif
 
 					mnuInstallHdPack.Enabled = running;
 					mnuHdPackEditor.Enabled = !netPlay && running;
@@ -1359,16 +1350,6 @@ namespace Mesen.GUI.Forms
 					this.menuStrip.Focus();
 				}
 			}
-
-#if !HIDETESTMENU
-			if(keyData == Keys.Pause) {
-				if(InteropEmu.RomTestRecording()) {
-					InteropEmu.RomTestStop();
-				} else {
-					InteropEmu.RomTestRecord(ConfigManager.TestFolder + "\\" + InteropEmu.GetRomInfo().GetRomName() + ".mtp", true);
-				}
-			}
-#endif
 
 			return base.ProcessCmdKey(ref msg, keyData);
 		}
