@@ -1,0 +1,27 @@
+# based off NovaSquirrel's Mesen-X project action!
+name: "Windows build"
+on: push
+
+jobs:
+  win-build:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up dependencies
+        shell: bash
+        run: |
+          mkdir -p "bin/Any CPU/Release"
+          cp -v -r GUI.NET/Dependencies "bin/Any CPU/Release"
+      - name: Build core
+        working-directory: bin
+        shell: cmd
+        run: |
+          call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+          msbuild ..\Mesen.sln /t:Build /p:Configuration=Release /p:Platform=x64
+          copy "x64\Release\MesenCore.dll" "Any CPU\Release\Dependencies\MesenCore.x64.dll"
+          msbuild ..\Mesen.sln /t:Build /p:Configuration=Release /p:Platform="Any CPU"
+      - name: Upload binary
+        uses: actions/upload-artifact@v1
+        with:
+          name: Mesen-win
+          path: bin/Any CPU/Release/Mesen.exe
