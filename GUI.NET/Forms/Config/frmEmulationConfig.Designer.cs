@@ -180,630 +180,645 @@ namespace Mesen.GUI.Forms.Config
             0,
             0,
             0});
-            this.nudTurboSpeed.Location = new System.Drawing.Point(3, 3);
-            this.nudTurboSpeed.Maximum = new decimal(new int[] {
+			this.nudTurboSpeed.Location = new System.Drawing.Point(3, 3);
+			this.nudTurboSpeed.Maximum = new decimal(new int[] {
             5000,
             0,
             0,
             0});
-            this.nudTurboSpeed.MaximumSize = new System.Drawing.Size(10000, 20);
-            this.nudTurboSpeed.Minimum = new decimal(new int[] {
+			this.nudTurboSpeed.MaximumSize = new System.Drawing.Size(10000, 20);
+			this.nudTurboSpeed.Minimum = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.nudTurboSpeed.MinimumSize = new System.Drawing.Size(0, 21);
-            this.nudTurboSpeed.Name = "nudTurboSpeed";
-            this.nudTurboSpeed.Size = new System.Drawing.Size(48, 21);
-            this.nudTurboSpeed.TabIndex = 1;
-            this.nudTurboSpeed.Value = new decimal(new int[] {
+			this.nudTurboSpeed.MinimumSize = new System.Drawing.Size(0, 21);
+			this.nudTurboSpeed.Name = "nudTurboSpeed";
+			this.nudTurboSpeed.Size = new System.Drawing.Size(48, 21);
+			this.nudTurboSpeed.TabIndex = 1;
+			this.nudTurboSpeed.Value = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            // 
-            // lblTurboSpeedHint
-            // 
-            this.lblTurboSpeedHint.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTurboSpeedHint.AutoSize = true;
-            this.lblTurboSpeedHint.Location = new System.Drawing.Point(57, 7);
-            this.lblTurboSpeedHint.Name = "lblTurboSpeedHint";
-            this.lblTurboSpeedHint.Size = new System.Drawing.Size(121, 13);
-            this.lblTurboSpeedHint.TabIndex = 2;
-            this.lblTurboSpeedHint.Text = "%  (0 = Maximum speed)";
-            // 
-            // lblTurboSpeed
-            // 
-            this.lblTurboSpeed.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTurboSpeed.AutoSize = true;
-            this.lblTurboSpeed.Location = new System.Drawing.Point(3, 34);
-            this.lblTurboSpeed.Name = "lblTurboSpeed";
-            this.lblTurboSpeed.Size = new System.Drawing.Size(105, 13);
-            this.lblTurboSpeed.TabIndex = 13;
-            this.lblTurboSpeed.Text = "Fast Forward Speed:";
-            // 
-            // flowLayoutPanel6
-            // 
-            this.flowLayoutPanel6.AutoSize = true;
-            this.flowLayoutPanel6.Controls.Add(this.nudEmulationSpeed);
-            this.flowLayoutPanel6.Controls.Add(this.lblEmuSpeedHint);
-            this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(111, 0);
-            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(408, 27);
-            this.flowLayoutPanel6.TabIndex = 11;
-            // 
-            // nudEmulationSpeed
-            // 
-            this.nudEmulationSpeed.DecimalPlaces = 0;
-            this.nudEmulationSpeed.Increment = new decimal(new int[] {
+			// 
+			// lblTurboSpeedHint
+			// 
+			this.lblTurboSpeedHint.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.lblTurboSpeedHint.AutoSize = true;
+			this.lblTurboSpeedHint.Location = new System.Drawing.Point(57, 7);
+			this.lblTurboSpeedHint.Name = "lblTurboSpeedHint";
+			this.lblTurboSpeedHint.Size = new System.Drawing.Size(121, 13);
+			this.lblTurboSpeedHint.TabIndex = 2;
+			this.lblTurboSpeedHint.Text = "%  (0 = Maximum speed)";
+			// 
+			// lblTurboSpeed
+			// 
+			this.lblTurboSpeed.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.lblTurboSpeed.AutoSize = true;
+			this.lblTurboSpeed.Location = new System.Drawing.Point(3, 34);
+			this.lblTurboSpeed.Name = "lblTurboSpeed";
+			this.lblTurboSpeed.Size = new System.Drawing.Size(105, 13);
+			this.lblTurboSpeed.TabIndex = 13;
+			this.lblTurboSpeed.Text = "Fast Forward Speed:";
+			// 
+			// flowLayoutPanel6
+			// 
+			this.flowLayoutPanel6.AutoSize = true;
+			this.flowLayoutPanel6.Controls.Add(this.nudEmulationSpeed);
+			this.flowLayoutPanel6.Controls.Add(this.lblEmuSpeedHint);
+			this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.flowLayoutPanel6.Location = new System.Drawing.Point(111, 0);
+			this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
+			this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+			this.flowLayoutPanel6.Size = new System.Drawing.Size(408, 27);
+			this.flowLayoutPanel6.TabIndex = 11;
+			// 
+			// nudEmulationSpeed
+			// 
+			this.nudEmulationSpeed.DecimalPlaces = 0;
+			this.nudEmulationSpeed.Increment = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.nudEmulationSpeed.Location = new System.Drawing.Point(3, 3);
-            this.nudEmulationSpeed.Maximum = new decimal(new int[] {
+			this.nudEmulationSpeed.Location = new System.Drawing.Point(3, 3);
+			this.nudEmulationSpeed.Maximum = new decimal(new int[] {
             5000,
             0,
             0,
             0});
-            this.nudEmulationSpeed.MaximumSize = new System.Drawing.Size(10000, 20);
-            this.nudEmulationSpeed.Minimum = new decimal(new int[] {
+			this.nudEmulationSpeed.MaximumSize = new System.Drawing.Size(10000, 20);
+			this.nudEmulationSpeed.Minimum = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.nudEmulationSpeed.MinimumSize = new System.Drawing.Size(0, 21);
-            this.nudEmulationSpeed.Name = "nudEmulationSpeed";
-            this.nudEmulationSpeed.Size = new System.Drawing.Size(48, 21);
-            this.nudEmulationSpeed.TabIndex = 1;
-            this.nudEmulationSpeed.Value = new decimal(new int[] {
+			this.nudEmulationSpeed.MinimumSize = new System.Drawing.Size(0, 21);
+			this.nudEmulationSpeed.Name = "nudEmulationSpeed";
+			this.nudEmulationSpeed.Size = new System.Drawing.Size(48, 21);
+			this.nudEmulationSpeed.TabIndex = 1;
+			this.nudEmulationSpeed.Value = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            // 
-            // lblEmuSpeedHint
-            // 
-            this.lblEmuSpeedHint.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblEmuSpeedHint.AutoSize = true;
-            this.lblEmuSpeedHint.Location = new System.Drawing.Point(57, 7);
-            this.lblEmuSpeedHint.Name = "lblEmuSpeedHint";
-            this.lblEmuSpeedHint.Size = new System.Drawing.Size(121, 13);
-            this.lblEmuSpeedHint.TabIndex = 2;
-            this.lblEmuSpeedHint.Text = "%  (0 = Maximum speed)";
-            // 
-            // lblEmulationSpeed
-            // 
-            this.lblEmulationSpeed.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblEmulationSpeed.AutoSize = true;
-            this.lblEmulationSpeed.Location = new System.Drawing.Point(3, 7);
-            this.lblEmulationSpeed.Name = "lblEmulationSpeed";
-            this.lblEmulationSpeed.Size = new System.Drawing.Size(90, 13);
-            this.lblEmulationSpeed.TabIndex = 12;
-            this.lblEmulationSpeed.Text = "Emulation Speed:";
-            // 
-            // lblRewindSpeed
-            // 
-            this.lblRewindSpeed.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblRewindSpeed.AutoSize = true;
-            this.lblRewindSpeed.Location = new System.Drawing.Point(3, 61);
-            this.lblRewindSpeed.Name = "lblRewindSpeed";
-            this.lblRewindSpeed.Size = new System.Drawing.Size(80, 13);
-            this.lblRewindSpeed.TabIndex = 15;
-            this.lblRewindSpeed.Text = "Rewind Speed:";
-            // 
-            // flowLayoutPanel10
-            // 
-            this.flowLayoutPanel10.AutoSize = true;
-            this.flowLayoutPanel10.Controls.Add(this.nudRewindSpeed);
-            this.flowLayoutPanel10.Controls.Add(this.lblRewindSpeedHint);
-            this.flowLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel10.Location = new System.Drawing.Point(111, 54);
-            this.flowLayoutPanel10.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel10.Name = "flowLayoutPanel10";
-            this.flowLayoutPanel10.Size = new System.Drawing.Size(408, 27);
-            this.flowLayoutPanel10.TabIndex = 16;
-            // 
-            // nudRewindSpeed
-            // 
-            this.nudRewindSpeed.DecimalPlaces = 0;
-            this.nudRewindSpeed.Increment = new decimal(new int[] {
+			// 
+			// lblEmuSpeedHint
+			// 
+			this.lblEmuSpeedHint.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.lblEmuSpeedHint.AutoSize = true;
+			this.lblEmuSpeedHint.Location = new System.Drawing.Point(57, 7);
+			this.lblEmuSpeedHint.Name = "lblEmuSpeedHint";
+			this.lblEmuSpeedHint.Size = new System.Drawing.Size(121, 13);
+			this.lblEmuSpeedHint.TabIndex = 2;
+			this.lblEmuSpeedHint.Text = "%  (0 = Maximum speed)";
+			// 
+			// lblEmulationSpeed
+			// 
+			this.lblEmulationSpeed.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.lblEmulationSpeed.AutoSize = true;
+			this.lblEmulationSpeed.Location = new System.Drawing.Point(3, 7);
+			this.lblEmulationSpeed.Name = "lblEmulationSpeed";
+			this.lblEmulationSpeed.Size = new System.Drawing.Size(90, 13);
+			this.lblEmulationSpeed.TabIndex = 12;
+			this.lblEmulationSpeed.Text = "Emulation Speed:";
+			// 
+			// lblRewindSpeed
+			// 
+			this.lblRewindSpeed.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.lblRewindSpeed.AutoSize = true;
+			this.lblRewindSpeed.Location = new System.Drawing.Point(3, 61);
+			this.lblRewindSpeed.Name = "lblRewindSpeed";
+			this.lblRewindSpeed.Size = new System.Drawing.Size(80, 13);
+			this.lblRewindSpeed.TabIndex = 15;
+			this.lblRewindSpeed.Text = "Rewind Speed:";
+			// 
+			// flowLayoutPanel10
+			// 
+			this.flowLayoutPanel10.AutoSize = true;
+			this.flowLayoutPanel10.Controls.Add(this.nudRewindSpeed);
+			this.flowLayoutPanel10.Controls.Add(this.lblRewindSpeedHint);
+			this.flowLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.flowLayoutPanel10.Location = new System.Drawing.Point(111, 54);
+			this.flowLayoutPanel10.Margin = new System.Windows.Forms.Padding(0);
+			this.flowLayoutPanel10.Name = "flowLayoutPanel10";
+			this.flowLayoutPanel10.Size = new System.Drawing.Size(408, 27);
+			this.flowLayoutPanel10.TabIndex = 16;
+			// 
+			// nudRewindSpeed
+			// 
+			this.nudRewindSpeed.DecimalPlaces = 0;
+			this.nudRewindSpeed.Increment = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.nudRewindSpeed.Location = new System.Drawing.Point(3, 3);
-            this.nudRewindSpeed.Maximum = new decimal(new int[] {
+			this.nudRewindSpeed.Location = new System.Drawing.Point(3, 3);
+			this.nudRewindSpeed.Maximum = new decimal(new int[] {
             5000,
             0,
             0,
             0});
-            this.nudRewindSpeed.MaximumSize = new System.Drawing.Size(10000, 20);
-            this.nudRewindSpeed.Minimum = new decimal(new int[] {
+			this.nudRewindSpeed.MaximumSize = new System.Drawing.Size(10000, 20);
+			this.nudRewindSpeed.Minimum = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.nudRewindSpeed.MinimumSize = new System.Drawing.Size(0, 21);
-            this.nudRewindSpeed.Name = "nudRewindSpeed";
-            this.nudRewindSpeed.Size = new System.Drawing.Size(48, 21);
-            this.nudRewindSpeed.TabIndex = 1;
-            this.nudRewindSpeed.Value = new decimal(new int[] {
+			this.nudRewindSpeed.MinimumSize = new System.Drawing.Size(0, 21);
+			this.nudRewindSpeed.Name = "nudRewindSpeed";
+			this.nudRewindSpeed.Size = new System.Drawing.Size(48, 21);
+			this.nudRewindSpeed.TabIndex = 1;
+			this.nudRewindSpeed.Value = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            // 
-            // lblRewindSpeedHint
-            // 
-            this.lblRewindSpeedHint.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblRewindSpeedHint.AutoSize = true;
-            this.lblRewindSpeedHint.Location = new System.Drawing.Point(57, 7);
-            this.lblRewindSpeedHint.Name = "lblRewindSpeedHint";
-            this.lblRewindSpeedHint.Size = new System.Drawing.Size(121, 13);
-            this.lblRewindSpeedHint.TabIndex = 2;
-            this.lblRewindSpeedHint.Text = "%  (0 = Maximum speed)";
-            // 
-            // tpgAdvanced
-            // 
-            this.tpgAdvanced.Controls.Add(this.tableLayoutPanel1);
-            this.tpgAdvanced.Location = new System.Drawing.Point(4, 22);
-            this.tpgAdvanced.Name = "tpgAdvanced";
-            this.tpgAdvanced.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgAdvanced.Size = new System.Drawing.Size(525, 360);
-            this.tpgAdvanced.TabIndex = 1;
-            this.tpgAdvanced.Text = "Advanced";
-            this.tpgAdvanced.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.chkEnablePpu2000ScrollGlitch, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.chkEnablePpu2006ScrollGlitch, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.chkRandomizeCpuPpuAlignment, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblMiscSettings, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.chkMapperRandomPowerOnState, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.chkEnableOamDecay, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.chkDisablePaletteRead, 0, 13);
-            this.tableLayoutPanel1.Controls.Add(this.chkDisableOamAddrBug, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.chkDisablePpuReset, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.chkDisablePpu2004Reads, 0, 12);
-            this.tableLayoutPanel1.Controls.Add(this.chkUseNes101Hvc101Behavior, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.chkAllowInvalidInput, 0, 14);
-            this.tableLayoutPanel1.Controls.Add(this.chkUseAlternativeMmc3Irq, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.lblDeveloperSettings, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 16;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(519, 354);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // chkEnablePpu2000ScrollGlitch
-            // 
-            this.chkEnablePpu2000ScrollGlitch.AutoSize = true;
-            this.chkEnablePpu2000ScrollGlitch.Checked = false;
-            this.chkEnablePpu2000ScrollGlitch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkEnablePpu2000ScrollGlitch.Location = new System.Drawing.Point(10, 112);
-            this.chkEnablePpu2000ScrollGlitch.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.chkEnablePpu2000ScrollGlitch.MinimumSize = new System.Drawing.Size(0, 23);
-            this.chkEnablePpu2000ScrollGlitch.Name = "chkEnablePpu2000ScrollGlitch";
-            this.chkEnablePpu2000ScrollGlitch.Size = new System.Drawing.Size(509, 23);
-            this.chkEnablePpu2000ScrollGlitch.TabIndex = 38;
-            this.chkEnablePpu2000ScrollGlitch.Text = "Enable PPU $2000/$2005/$2006 first-write scroll glitch emulation";
-            // 
-            // chkEnablePpu2006ScrollGlitch
-            // 
-            this.chkEnablePpu2006ScrollGlitch.AutoSize = true;
-            this.chkEnablePpu2006ScrollGlitch.Checked = false;
-            this.chkEnablePpu2006ScrollGlitch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkEnablePpu2006ScrollGlitch.Location = new System.Drawing.Point(10, 89);
-            this.chkEnablePpu2006ScrollGlitch.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.chkEnablePpu2006ScrollGlitch.MinimumSize = new System.Drawing.Size(0, 23);
-            this.chkEnablePpu2006ScrollGlitch.Name = "chkEnablePpu2006ScrollGlitch";
-            this.chkEnablePpu2006ScrollGlitch.Size = new System.Drawing.Size(509, 23);
-            this.chkEnablePpu2006ScrollGlitch.TabIndex = 37;
-            this.chkEnablePpu2006ScrollGlitch.Text = "Enable PPU $2006 write scroll glitch emulation";
-            // 
-            // chkRandomizeCpuPpuAlignment
-            // 
-            this.chkRandomizeCpuPpuAlignment.AutoSize = true;
-            this.chkRandomizeCpuPpuAlignment.Checked = false;
-            this.chkRandomizeCpuPpuAlignment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkRandomizeCpuPpuAlignment.Location = new System.Drawing.Point(10, 66);
-            this.chkRandomizeCpuPpuAlignment.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.chkRandomizeCpuPpuAlignment.MinimumSize = new System.Drawing.Size(0, 23);
-            this.chkRandomizeCpuPpuAlignment.Name = "chkRandomizeCpuPpuAlignment";
-            this.chkRandomizeCpuPpuAlignment.Size = new System.Drawing.Size(509, 23);
-            this.chkRandomizeCpuPpuAlignment.TabIndex = 36;
-            this.chkRandomizeCpuPpuAlignment.Text = "Randomize power-on/reset CPU/PPU alignment";
-            // 
-            // lblMiscSettings
-            // 
-            this.lblMiscSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblMiscSettings.AutoSize = true;
-            this.lblMiscSettings.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblMiscSettings.Location = new System.Drawing.Point(0, 166);
-            this.lblMiscSettings.Margin = new System.Windows.Forms.Padding(0, 0, 3, 2);
-            this.lblMiscSettings.Name = "lblMiscSettings";
-            this.lblMiscSettings.Size = new System.Drawing.Size(115, 13);
-            this.lblMiscSettings.TabIndex = 35;
-            this.lblMiscSettings.Text = "Miscellaneous Settings";
-            // 
-            // chkMapperRandomPowerOnState
-            // 
-            this.chkMapperRandomPowerOnState.AutoSize = true;
-            this.chkMapperRandomPowerOnState.Checked = false;
-            this.chkMapperRandomPowerOnState.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkMapperRandomPowerOnState.Location = new System.Drawing.Point(10, 43);
-            this.chkMapperRandomPowerOnState.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.chkMapperRandomPowerOnState.MinimumSize = new System.Drawing.Size(0, 23);
-            this.chkMapperRandomPowerOnState.Name = "chkMapperRandomPowerOnState";
-            this.chkMapperRandomPowerOnState.Size = new System.Drawing.Size(509, 23);
-            this.chkMapperRandomPowerOnState.TabIndex = 11;
-            this.chkMapperRandomPowerOnState.Text = "Randomize power-on state for mappers";
-            // 
-            // chkEnableOamDecay
-            // 
-            this.chkEnableOamDecay.Checked = false;
-            this.chkEnableOamDecay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkEnableOamDecay.Location = new System.Drawing.Point(10, 20);
-            this.chkEnableOamDecay.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.chkEnableOamDecay.MinimumSize = new System.Drawing.Size(0, 21);
-            this.chkEnableOamDecay.Name = "chkEnableOamDecay";
-            this.chkEnableOamDecay.Size = new System.Drawing.Size(509, 23);
-            this.chkEnableOamDecay.TabIndex = 9;
-            this.chkEnableOamDecay.Text = "Enable OAM RAM decay";
-            // 
-            // lblRamPowerOnState
-            // 
-            this.lblRamPowerOnState.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblRamPowerOnState.AutoSize = true;
-            this.lblRamPowerOnState.Location = new System.Drawing.Point(3, 6);
-            this.lblRamPowerOnState.Name = "lblRamPowerOnState";
-            this.lblRamPowerOnState.Size = new System.Drawing.Size(159, 13);
-            this.lblRamPowerOnState.TabIndex = 0;
-            this.lblRamPowerOnState.Text = "Default power on state for RAM:";
-            // 
-            // cboRamPowerOnState
-            // 
-            this.cboRamPowerOnState.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboRamPowerOnState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRamPowerOnState.FormattingEnabled = true;
-            this.cboRamPowerOnState.Location = new System.Drawing.Point(168, 3);
-            this.cboRamPowerOnState.Name = "cboRamPowerOnState";
-            this.cboRamPowerOnState.Size = new System.Drawing.Size(348, 21);
-            this.cboRamPowerOnState.TabIndex = 1;
-            // 
-            // chkDisablePaletteRead
-            // 
-            this.chkDisablePaletteRead.Checked = false;
-            this.chkDisablePaletteRead.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkDisablePaletteRead.Location = new System.Drawing.Point(10, 296);
-            this.chkDisablePaletteRead.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.chkDisablePaletteRead.MinimumSize = new System.Drawing.Size(0, 21);
-            this.chkDisablePaletteRead.Name = "chkDisablePaletteRead";
-            this.chkDisablePaletteRead.Size = new System.Drawing.Size(509, 23);
-            this.chkDisablePaletteRead.TabIndex = 6;
-            this.chkDisablePaletteRead.Text = "Disable PPU palette reads";
-            // 
-            // chkDisableOamAddrBug
-            // 
-            this.chkDisableOamAddrBug.Checked = false;
-            this.chkDisableOamAddrBug.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkDisableOamAddrBug.Location = new System.Drawing.Point(10, 250);
-            this.chkDisableOamAddrBug.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.chkDisableOamAddrBug.MinimumSize = new System.Drawing.Size(0, 21);
-            this.chkDisableOamAddrBug.Name = "chkDisableOamAddrBug";
-            this.chkDisableOamAddrBug.Size = new System.Drawing.Size(509, 23);
-            this.chkDisableOamAddrBug.TabIndex = 5;
-            this.chkDisableOamAddrBug.Text = "Disable PPU OAMADDR bug emulation";
-            // 
-            // chkDisablePpuReset
-            // 
-            this.chkDisablePpuReset.Checked = false;
-            this.chkDisablePpuReset.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkDisablePpuReset.Location = new System.Drawing.Point(10, 227);
-            this.chkDisablePpuReset.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.chkDisablePpuReset.MinimumSize = new System.Drawing.Size(0, 21);
-            this.chkDisablePpuReset.Name = "chkDisablePpuReset";
-            this.chkDisablePpuReset.Size = new System.Drawing.Size(509, 23);
-            this.chkDisablePpuReset.TabIndex = 7;
-            this.chkDisablePpuReset.Text = "Do not reset PPU when resetting console (Famicom behavior)";
-            // 
-            // chkDisablePpu2004Reads
-            // 
-            this.chkDisablePpu2004Reads.Checked = false;
-            this.chkDisablePpu2004Reads.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkDisablePpu2004Reads.Location = new System.Drawing.Point(10, 273);
-            this.chkDisablePpu2004Reads.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.chkDisablePpu2004Reads.MinimumSize = new System.Drawing.Size(0, 21);
-            this.chkDisablePpu2004Reads.Name = "chkDisablePpu2004Reads";
-            this.chkDisablePpu2004Reads.Size = new System.Drawing.Size(509, 23);
-            this.chkDisablePpu2004Reads.TabIndex = 4;
-            this.chkDisablePpu2004Reads.Text = "Disable PPU $2004 reads (Famicom behavior)";
-            // 
-            // chkUseNes101Hvc101Behavior
-            // 
-            this.chkUseNes101Hvc101Behavior.AutoSize = true;
-            this.chkUseNes101Hvc101Behavior.Location = new System.Drawing.Point(13, 207);
-            this.chkUseNes101Hvc101Behavior.Margin = new System.Windows.Forms.Padding(13, 3, 3, 3);
-            this.chkUseNes101Hvc101Behavior.Name = "chkUseNes101Hvc101Behavior";
-            this.chkUseNes101Hvc101Behavior.Size = new System.Drawing.Size(292, 17);
-            this.chkUseNes101Hvc101Behavior.TabIndex = 8;
-            this.chkUseNes101Hvc101Behavior.Text = "Use NES/HVC-101 (Top-loader / AV Famicom) behavior";
-            this.chkUseNes101Hvc101Behavior.UseVisualStyleBackColor = true;
-            // 
-            // chkAllowInvalidInput
-            // 
-            this.chkAllowInvalidInput.AutoSize = true;
-            this.chkAllowInvalidInput.Checked = false;
-            this.chkAllowInvalidInput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkAllowInvalidInput.Location = new System.Drawing.Point(10, 319);
-            this.chkAllowInvalidInput.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.chkAllowInvalidInput.MinimumSize = new System.Drawing.Size(0, 23);
-            this.chkAllowInvalidInput.Name = "chkAllowInvalidInput";
-            this.chkAllowInvalidInput.Size = new System.Drawing.Size(509, 23);
-            this.chkAllowInvalidInput.TabIndex = 1;
-            this.chkAllowInvalidInput.Text = "Allow invalid input (e.g Down + Up or Left + Right at the same time)";
-            // 
-            // chkUseAlternativeMmc3Irq
-            // 
-            this.chkUseAlternativeMmc3Irq.AutoSize = true;
-            this.chkUseAlternativeMmc3Irq.Location = new System.Drawing.Point(13, 184);
-            this.chkUseAlternativeMmc3Irq.Margin = new System.Windows.Forms.Padding(13, 3, 3, 3);
-            this.chkUseAlternativeMmc3Irq.Name = "chkUseAlternativeMmc3Irq";
-            this.chkUseAlternativeMmc3Irq.Size = new System.Drawing.Size(197, 17);
-            this.chkUseAlternativeMmc3Irq.TabIndex = 0;
-            this.chkUseAlternativeMmc3Irq.Text = "Use alternative MMC3 IRQ behavior";
-            this.chkUseAlternativeMmc3Irq.UseVisualStyleBackColor = true;
-            // 
-            // lblDeveloperSettings
-            // 
-            this.lblDeveloperSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblDeveloperSettings.AutoSize = true;
-            this.lblDeveloperSettings.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblDeveloperSettings.Location = new System.Drawing.Point(0, 5);
-            this.lblDeveloperSettings.Margin = new System.Windows.Forms.Padding(0, 0, 3, 2);
-            this.lblDeveloperSettings.Name = "lblDeveloperSettings";
-            this.lblDeveloperSettings.Size = new System.Drawing.Size(284, 13);
-            this.lblDeveloperSettings.TabIndex = 33;
-            this.lblDeveloperSettings.Text = "Recommended for developers (homebrew / ROM hacking)";
-            // 
-            // tpgOverclocking
-            // 
-            this.tpgOverclocking.Controls.Add(this.picHint);
-            this.tpgOverclocking.Controls.Add(this.tableLayoutPanel3);
-            this.tpgOverclocking.Location = new System.Drawing.Point(4, 22);
-            this.tpgOverclocking.Name = "tpgOverclocking";
-            this.tpgOverclocking.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgOverclocking.Size = new System.Drawing.Size(525, 360);
-            this.tpgOverclocking.TabIndex = 2;
-            this.tpgOverclocking.Text = "Overclocking";
-            this.tpgOverclocking.UseVisualStyleBackColor = true;
-            // 
-            // picHint
-            // 
-            this.picHint.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.picHint.BackgroundImage = global::Mesen.GUI.Properties.Resources.Help;
-            this.picHint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picHint.Location = new System.Drawing.Point(12, 16);
-            this.picHint.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.picHint.Name = "picHint";
-            this.picHint.Size = new System.Drawing.Size(16, 16);
-            this.picHint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picHint.TabIndex = 0;
-            this.picHint.TabStop = false;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.lblOverclockHint, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel4, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel3, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.grpPpuTiming, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel2, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel7, 0, 7);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 8;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(519, 354);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // lblOverclockHint
-            // 
-            this.lblOverclockHint.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblOverclockHint.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblOverclockHint.Location = new System.Drawing.Point(3, 0);
-            this.lblOverclockHint.Name = "lblOverclockHint";
-            this.lblOverclockHint.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.lblOverclockHint.Size = new System.Drawing.Size(517, 41);
-            this.lblOverclockHint.TabIndex = 1;
-            this.lblOverclockHint.Text = resources.GetString("lblOverclockHint.Text");
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Controls.Add(this.lblEffectiveClockRateDendy);
-            this.flowLayoutPanel4.Controls.Add(this.lblEffectiveClockRateValueDendy);
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 152);
-            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(519, 20);
-            this.flowLayoutPanel4.TabIndex = 11;
-            // 
-            // lblEffectiveClockRateDendy
-            // 
-            this.lblEffectiveClockRateDendy.AutoSize = true;
-            this.lblEffectiveClockRateDendy.Location = new System.Drawing.Point(3, 0);
-            this.lblEffectiveClockRateDendy.Name = "lblEffectiveClockRateDendy";
-            this.lblEffectiveClockRateDendy.Size = new System.Drawing.Size(148, 13);
-            this.lblEffectiveClockRateDendy.TabIndex = 0;
-            this.lblEffectiveClockRateDendy.Text = "Effective Clock Rate (Dendy):";
-            // 
-            // lblEffectiveClockRateValueDendy
-            // 
-            this.lblEffectiveClockRateValueDendy.AutoSize = true;
-            this.lblEffectiveClockRateValueDendy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEffectiveClockRateValueDendy.Location = new System.Drawing.Point(157, 0);
-            this.lblEffectiveClockRateValueDendy.Name = "lblEffectiveClockRateValueDendy";
-            this.lblEffectiveClockRateValueDendy.Size = new System.Drawing.Size(37, 13);
-            this.lblEffectiveClockRateValueDendy.TabIndex = 1;
-            this.lblEffectiveClockRateValueDendy.Text = "100%";
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Controls.Add(this.lblEffectiveClockRatePal);
-            this.flowLayoutPanel3.Controls.Add(this.lblEffectiveClockRateValuePal);
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 135);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(519, 17);
-            this.flowLayoutPanel3.TabIndex = 9;
-            // 
-            // lblEffectiveClockRatePal
-            // 
-            this.lblEffectiveClockRatePal.AutoSize = true;
-            this.lblEffectiveClockRatePal.Location = new System.Drawing.Point(3, 0);
-            this.lblEffectiveClockRatePal.Name = "lblEffectiveClockRatePal";
-            this.lblEffectiveClockRatePal.Size = new System.Drawing.Size(137, 13);
-            this.lblEffectiveClockRatePal.TabIndex = 0;
-            this.lblEffectiveClockRatePal.Text = "Effective Clock Rate (PAL):";
-            // 
-            // lblEffectiveClockRateValuePal
-            // 
-            this.lblEffectiveClockRateValuePal.AutoSize = true;
-            this.lblEffectiveClockRateValuePal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEffectiveClockRateValuePal.Location = new System.Drawing.Point(146, 0);
-            this.lblEffectiveClockRateValuePal.Name = "lblEffectiveClockRateValuePal";
-            this.lblEffectiveClockRateValuePal.Size = new System.Drawing.Size(37, 13);
-            this.lblEffectiveClockRateValuePal.TabIndex = 1;
-            this.lblEffectiveClockRateValuePal.Text = "100%";
-            // 
-            // grpPpuTiming
-            // 
-            this.grpPpuTiming.Controls.Add(this.tableLayoutPanel5);
-            this.grpPpuTiming.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpPpuTiming.Location = new System.Drawing.Point(3, 44);
-            this.grpPpuTiming.Name = "grpPpuTiming";
-            this.grpPpuTiming.Size = new System.Drawing.Size(513, 71);
-            this.grpPpuTiming.TabIndex = 7;
-            this.grpPpuTiming.TabStop = false;
-            this.grpPpuTiming.Text = "PPU Vertical Blank Configuration";
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.Controls.Add(this.nudExtraScanlinesAfterNmi, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.nudExtraScanlinesBeforeNmi, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.lblExtraScanlinesBeforeNmi, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.lblExtraScanlinesAfterNmi, 0, 1);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 3;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(507, 52);
-            this.tableLayoutPanel5.TabIndex = 0;
-            // 
-            // nudExtraScanlinesAfterNmi
-            // 
-            this.nudExtraScanlinesAfterNmi.DecimalPlaces = 0;
-            this.nudExtraScanlinesAfterNmi.Increment = new decimal(new int[] {
+			// 
+			// lblRewindSpeedHint
+			// 
+			this.lblRewindSpeedHint.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.lblRewindSpeedHint.AutoSize = true;
+			this.lblRewindSpeedHint.Location = new System.Drawing.Point(57, 7);
+			this.lblRewindSpeedHint.Name = "lblRewindSpeedHint";
+			this.lblRewindSpeedHint.Size = new System.Drawing.Size(121, 13);
+			this.lblRewindSpeedHint.TabIndex = 2;
+			this.lblRewindSpeedHint.Text = "%  (0 = Maximum speed)";
+			// 
+			// tpgAdvanced
+			// 
+			this.tpgAdvanced.Controls.Add(this.tableLayoutPanel1);
+			this.tpgAdvanced.Location = new System.Drawing.Point(4, 22);
+			this.tpgAdvanced.Name = "tpgAdvanced";
+			this.tpgAdvanced.Padding = new System.Windows.Forms.Padding(3);
+			this.tpgAdvanced.Size = new System.Drawing.Size(525, 382);
+			this.tpgAdvanced.TabIndex = 1;
+			this.tpgAdvanced.Text = "Advanced";
+			this.tpgAdvanced.UseVisualStyleBackColor = true;
+			// 
+			// tableLayoutPanel1
+			// 
+			this.tableLayoutPanel1.ColumnCount = 1;
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel1.Controls.Add(this.chkEnablePpu2000ScrollGlitch, 0, 5);
+			this.tableLayoutPanel1.Controls.Add(this.chkEnablePpu2006ScrollGlitch, 0, 4);
+			this.tableLayoutPanel1.Controls.Add(this.chkRandomizeCpuPpuAlignment, 0, 3);
+			this.tableLayoutPanel1.Controls.Add(this.lblMiscSettings, 0, 7);
+			this.tableLayoutPanel1.Controls.Add(this.chkMapperRandomPowerOnState, 0, 2);
+			this.tableLayoutPanel1.Controls.Add(this.chkEnableOamDecay, 0, 1);
+			this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 6);
+			this.tableLayoutPanel1.Controls.Add(this.chkDisablePaletteRead, 0, 13);
+			this.tableLayoutPanel1.Controls.Add(this.chkDisableOamAddrBug, 0, 11);
+			this.tableLayoutPanel1.Controls.Add(this.chkDisablePpuReset, 0, 10);
+			this.tableLayoutPanel1.Controls.Add(this.chkDisablePpu2004Reads, 0, 12);
+			this.tableLayoutPanel1.Controls.Add(this.chkUseNes101Hvc101Behavior, 0, 9);
+			this.tableLayoutPanel1.Controls.Add(this.chkAllowInvalidInput, 0, 14);
+			this.tableLayoutPanel1.Controls.Add(this.chkUseAlternativeMmc3Irq, 0, 8);
+			this.tableLayoutPanel1.Controls.Add(this.lblDeveloperSettings, 0, 0);
+			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+			this.tableLayoutPanel1.RowCount = 16;
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(519, 376);
+			this.tableLayoutPanel1.TabIndex = 0;
+			// 
+			// chkEnablePpu2000ScrollGlitch
+			// 
+			this.chkEnablePpu2000ScrollGlitch.AutoSize = true;
+			this.chkEnablePpu2000ScrollGlitch.Checked = false;
+			this.chkEnablePpu2000ScrollGlitch.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chkEnablePpu2000ScrollGlitch.Location = new System.Drawing.Point(10, 112);
+			this.chkEnablePpu2000ScrollGlitch.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.chkEnablePpu2000ScrollGlitch.MinimumSize = new System.Drawing.Size(0, 23);
+			this.chkEnablePpu2000ScrollGlitch.Name = "chkEnablePpu2000ScrollGlitch";
+			this.chkEnablePpu2000ScrollGlitch.Size = new System.Drawing.Size(509, 23);
+			this.chkEnablePpu2000ScrollGlitch.TabIndex = 38;
+			this.chkEnablePpu2000ScrollGlitch.Text = "Enable PPU $2000/$2005/$2006 first-write scroll glitch emulation";
+			// 
+			// chkEnablePpu2006ScrollGlitch
+			// 
+			this.chkEnablePpu2006ScrollGlitch.AutoSize = true;
+			this.chkEnablePpu2006ScrollGlitch.Checked = false;
+			this.chkEnablePpu2006ScrollGlitch.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chkEnablePpu2006ScrollGlitch.Location = new System.Drawing.Point(10, 89);
+			this.chkEnablePpu2006ScrollGlitch.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.chkEnablePpu2006ScrollGlitch.MinimumSize = new System.Drawing.Size(0, 23);
+			this.chkEnablePpu2006ScrollGlitch.Name = "chkEnablePpu2006ScrollGlitch";
+			this.chkEnablePpu2006ScrollGlitch.Size = new System.Drawing.Size(509, 23);
+			this.chkEnablePpu2006ScrollGlitch.TabIndex = 37;
+			this.chkEnablePpu2006ScrollGlitch.Text = "Enable PPU $2006 write scroll glitch emulation";
+			// 
+			// chkRandomizeCpuPpuAlignment
+			// 
+			this.chkRandomizeCpuPpuAlignment.AutoSize = true;
+			this.chkRandomizeCpuPpuAlignment.Checked = false;
+			this.chkRandomizeCpuPpuAlignment.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chkRandomizeCpuPpuAlignment.Location = new System.Drawing.Point(10, 66);
+			this.chkRandomizeCpuPpuAlignment.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.chkRandomizeCpuPpuAlignment.MinimumSize = new System.Drawing.Size(0, 23);
+			this.chkRandomizeCpuPpuAlignment.Name = "chkRandomizeCpuPpuAlignment";
+			this.chkRandomizeCpuPpuAlignment.Size = new System.Drawing.Size(509, 23);
+			this.chkRandomizeCpuPpuAlignment.TabIndex = 36;
+			this.chkRandomizeCpuPpuAlignment.Text = "Randomize power-on/reset CPU/PPU alignment";
+			// 
+			// lblMiscSettings
+			// 
+			this.lblMiscSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.lblMiscSettings.AutoSize = true;
+			this.lblMiscSettings.ForeColor = System.Drawing.SystemColors.GrayText;
+			this.lblMiscSettings.Location = new System.Drawing.Point(0, 166);
+			this.lblMiscSettings.Margin = new System.Windows.Forms.Padding(0, 0, 3, 2);
+			this.lblMiscSettings.Name = "lblMiscSettings";
+			this.lblMiscSettings.Size = new System.Drawing.Size(115, 13);
+			this.lblMiscSettings.TabIndex = 35;
+			this.lblMiscSettings.Text = "Miscellaneous Settings";
+			// 
+			// chkMapperRandomPowerOnState
+			// 
+			this.chkMapperRandomPowerOnState.AutoSize = true;
+			this.chkMapperRandomPowerOnState.Checked = false;
+			this.chkMapperRandomPowerOnState.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chkMapperRandomPowerOnState.Location = new System.Drawing.Point(10, 43);
+			this.chkMapperRandomPowerOnState.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.chkMapperRandomPowerOnState.MinimumSize = new System.Drawing.Size(0, 23);
+			this.chkMapperRandomPowerOnState.Name = "chkMapperRandomPowerOnState";
+			this.chkMapperRandomPowerOnState.Size = new System.Drawing.Size(509, 23);
+			this.chkMapperRandomPowerOnState.TabIndex = 11;
+			this.chkMapperRandomPowerOnState.Text = "Randomize power-on state for mappers";
+			// 
+			// chkEnableOamDecay
+			// 
+			this.chkEnableOamDecay.Checked = false;
+			this.chkEnableOamDecay.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chkEnableOamDecay.Location = new System.Drawing.Point(10, 20);
+			this.chkEnableOamDecay.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.chkEnableOamDecay.MinimumSize = new System.Drawing.Size(0, 21);
+			this.chkEnableOamDecay.Name = "chkEnableOamDecay";
+			this.chkEnableOamDecay.Size = new System.Drawing.Size(509, 23);
+			this.chkEnableOamDecay.TabIndex = 9;
+			this.chkEnableOamDecay.Text = "Enable OAM RAM decay";
+			// 
+			// tableLayoutPanel2
+			// 
+			this.tableLayoutPanel2.ColumnCount = 2;
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel2.Controls.Add(this.cboRamPowerOnState, 1, 0);
+			this.tableLayoutPanel2.Controls.Add(this.lblRamPowerOnState, 0, 0);
+			this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 135);
+			this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+			this.tableLayoutPanel2.RowCount = 1;
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(519, 26);
+			this.tableLayoutPanel2.TabIndex = 2;
+			// 
+			// cboRamPowerOnState
+			// 
+			this.cboRamPowerOnState.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.cboRamPowerOnState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cboRamPowerOnState.FormattingEnabled = true;
+			this.cboRamPowerOnState.Location = new System.Drawing.Point(168, 3);
+			this.cboRamPowerOnState.Name = "cboRamPowerOnState";
+			this.cboRamPowerOnState.Size = new System.Drawing.Size(348, 21);
+			this.cboRamPowerOnState.TabIndex = 1;
+			// 
+			// lblRamPowerOnState
+			// 
+			this.lblRamPowerOnState.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.lblRamPowerOnState.AutoSize = true;
+			this.lblRamPowerOnState.Location = new System.Drawing.Point(3, 6);
+			this.lblRamPowerOnState.Name = "lblRamPowerOnState";
+			this.lblRamPowerOnState.Size = new System.Drawing.Size(159, 13);
+			this.lblRamPowerOnState.TabIndex = 0;
+			this.lblRamPowerOnState.Text = "Default power on state for RAM:";
+			// 
+			// chkDisablePaletteRead
+			// 
+			this.chkDisablePaletteRead.Checked = false;
+			this.chkDisablePaletteRead.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chkDisablePaletteRead.Location = new System.Drawing.Point(10, 296);
+			this.chkDisablePaletteRead.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.chkDisablePaletteRead.MinimumSize = new System.Drawing.Size(0, 21);
+			this.chkDisablePaletteRead.Name = "chkDisablePaletteRead";
+			this.chkDisablePaletteRead.Size = new System.Drawing.Size(509, 23);
+			this.chkDisablePaletteRead.TabIndex = 6;
+			this.chkDisablePaletteRead.Text = "Disable PPU palette reads";
+			// 
+			// chkDisableOamAddrBug
+			// 
+			this.chkDisableOamAddrBug.Checked = false;
+			this.chkDisableOamAddrBug.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chkDisableOamAddrBug.Location = new System.Drawing.Point(10, 250);
+			this.chkDisableOamAddrBug.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.chkDisableOamAddrBug.MinimumSize = new System.Drawing.Size(0, 21);
+			this.chkDisableOamAddrBug.Name = "chkDisableOamAddrBug";
+			this.chkDisableOamAddrBug.Size = new System.Drawing.Size(509, 23);
+			this.chkDisableOamAddrBug.TabIndex = 5;
+			this.chkDisableOamAddrBug.Text = "Disable PPU OAMADDR bug emulation";
+			// 
+			// chkDisablePpuReset
+			// 
+			this.chkDisablePpuReset.Checked = false;
+			this.chkDisablePpuReset.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chkDisablePpuReset.Location = new System.Drawing.Point(10, 227);
+			this.chkDisablePpuReset.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.chkDisablePpuReset.MinimumSize = new System.Drawing.Size(0, 21);
+			this.chkDisablePpuReset.Name = "chkDisablePpuReset";
+			this.chkDisablePpuReset.Size = new System.Drawing.Size(509, 23);
+			this.chkDisablePpuReset.TabIndex = 7;
+			this.chkDisablePpuReset.Text = "Do not reset PPU when resetting console (Famicom behavior)";
+			// 
+			// chkDisablePpu2004Reads
+			// 
+			this.chkDisablePpu2004Reads.Checked = false;
+			this.chkDisablePpu2004Reads.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chkDisablePpu2004Reads.Location = new System.Drawing.Point(10, 273);
+			this.chkDisablePpu2004Reads.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.chkDisablePpu2004Reads.MinimumSize = new System.Drawing.Size(0, 21);
+			this.chkDisablePpu2004Reads.Name = "chkDisablePpu2004Reads";
+			this.chkDisablePpu2004Reads.Size = new System.Drawing.Size(509, 23);
+			this.chkDisablePpu2004Reads.TabIndex = 4;
+			this.chkDisablePpu2004Reads.Text = "Disable PPU $2004 reads (Famicom behavior)";
+			// 
+			// chkUseNes101Hvc101Behavior
+			// 
+			this.chkUseNes101Hvc101Behavior.AutoSize = true;
+			this.chkUseNes101Hvc101Behavior.Location = new System.Drawing.Point(13, 207);
+			this.chkUseNes101Hvc101Behavior.Margin = new System.Windows.Forms.Padding(13, 3, 3, 3);
+			this.chkUseNes101Hvc101Behavior.Name = "chkUseNes101Hvc101Behavior";
+			this.chkUseNes101Hvc101Behavior.Size = new System.Drawing.Size(292, 17);
+			this.chkUseNes101Hvc101Behavior.TabIndex = 8;
+			this.chkUseNes101Hvc101Behavior.Text = "Use NES/HVC-101 (Top-loader / AV Famicom) behavior";
+			this.chkUseNes101Hvc101Behavior.UseVisualStyleBackColor = true;
+			// 
+			// chkAllowInvalidInput
+			// 
+			this.chkAllowInvalidInput.AutoSize = true;
+			this.chkAllowInvalidInput.Checked = false;
+			this.chkAllowInvalidInput.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chkAllowInvalidInput.Location = new System.Drawing.Point(10, 319);
+			this.chkAllowInvalidInput.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.chkAllowInvalidInput.MinimumSize = new System.Drawing.Size(0, 23);
+			this.chkAllowInvalidInput.Name = "chkAllowInvalidInput";
+			this.chkAllowInvalidInput.Size = new System.Drawing.Size(509, 23);
+			this.chkAllowInvalidInput.TabIndex = 1;
+			this.chkAllowInvalidInput.Text = "Allow invalid input (e.g Down + Up or Left + Right at the same time)";
+			// 
+			// chkUseAlternativeMmc3Irq
+			// 
+			this.chkUseAlternativeMmc3Irq.AutoSize = true;
+			this.chkUseAlternativeMmc3Irq.Location = new System.Drawing.Point(13, 184);
+			this.chkUseAlternativeMmc3Irq.Margin = new System.Windows.Forms.Padding(13, 3, 3, 3);
+			this.chkUseAlternativeMmc3Irq.Name = "chkUseAlternativeMmc3Irq";
+			this.chkUseAlternativeMmc3Irq.Size = new System.Drawing.Size(197, 17);
+			this.chkUseAlternativeMmc3Irq.TabIndex = 0;
+			this.chkUseAlternativeMmc3Irq.Text = "Use alternative MMC3 IRQ behavior";
+			this.chkUseAlternativeMmc3Irq.UseVisualStyleBackColor = true;
+			// 
+			// lblDeveloperSettings
+			// 
+			this.lblDeveloperSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.lblDeveloperSettings.AutoSize = true;
+			this.lblDeveloperSettings.ForeColor = System.Drawing.SystemColors.GrayText;
+			this.lblDeveloperSettings.Location = new System.Drawing.Point(0, 5);
+			this.lblDeveloperSettings.Margin = new System.Windows.Forms.Padding(0, 0, 3, 2);
+			this.lblDeveloperSettings.Name = "lblDeveloperSettings";
+			this.lblDeveloperSettings.Size = new System.Drawing.Size(284, 13);
+			this.lblDeveloperSettings.TabIndex = 33;
+			this.lblDeveloperSettings.Text = "Recommended for developers (homebrew / ROM hacking)";
+			// 
+			// tpgOverclocking
+			// 
+			this.tpgOverclocking.Controls.Add(this.picHint);
+			this.tpgOverclocking.Controls.Add(this.tableLayoutPanel3);
+			this.tpgOverclocking.Location = new System.Drawing.Point(4, 22);
+			this.tpgOverclocking.Name = "tpgOverclocking";
+			this.tpgOverclocking.Padding = new System.Windows.Forms.Padding(3);
+			this.tpgOverclocking.Size = new System.Drawing.Size(525, 382);
+			this.tpgOverclocking.TabIndex = 2;
+			this.tpgOverclocking.Text = "Overclocking";
+			this.tpgOverclocking.UseVisualStyleBackColor = true;
+			// 
+			// picHint
+			// 
+			this.picHint.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.picHint.BackgroundImage = global::Mesen.GUI.Properties.Resources.Help;
+			this.picHint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.picHint.Location = new System.Drawing.Point(12, 16);
+			this.picHint.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+			this.picHint.Name = "picHint";
+			this.picHint.Size = new System.Drawing.Size(16, 16);
+			this.picHint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.picHint.TabIndex = 0;
+			this.picHint.TabStop = false;
+			// 
+			// tableLayoutPanel3
+			// 
+			this.tableLayoutPanel3.ColumnCount = 1;
+			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel3.Controls.Add(this.lblOverclockHint, 0, 0);
+			this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel4, 0, 5);
+			this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel3, 0, 4);
+			this.tableLayoutPanel3.Controls.Add(this.grpPpuTiming, 0, 1);
+			this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel2, 0, 3);
+			this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel7, 0, 7);
+			this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+			this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+			this.tableLayoutPanel3.RowCount = 8;
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel3.Size = new System.Drawing.Size(519, 376);
+			this.tableLayoutPanel3.TabIndex = 0;
+			// 
+			// lblOverclockHint
+			// 
+			this.lblOverclockHint.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.lblOverclockHint.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblOverclockHint.Location = new System.Drawing.Point(3, 0);
+			this.lblOverclockHint.Name = "lblOverclockHint";
+			this.lblOverclockHint.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+			this.lblOverclockHint.Size = new System.Drawing.Size(517, 41);
+			this.lblOverclockHint.TabIndex = 1;
+			this.lblOverclockHint.Text = resources.GetString("lblOverclockHint.Text");
+			// 
+			// flowLayoutPanel4
+			// 
+			this.flowLayoutPanel4.Controls.Add(this.lblEffectiveClockRateDendy);
+			this.flowLayoutPanel4.Controls.Add(this.lblEffectiveClockRateValueDendy);
+			this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 152);
+			this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+			this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+			this.flowLayoutPanel4.Size = new System.Drawing.Size(519, 20);
+			this.flowLayoutPanel4.TabIndex = 11;
+			// 
+			// lblEffectiveClockRateDendy
+			// 
+			this.lblEffectiveClockRateDendy.AutoSize = true;
+			this.lblEffectiveClockRateDendy.Location = new System.Drawing.Point(3, 0);
+			this.lblEffectiveClockRateDendy.Name = "lblEffectiveClockRateDendy";
+			this.lblEffectiveClockRateDendy.Size = new System.Drawing.Size(148, 13);
+			this.lblEffectiveClockRateDendy.TabIndex = 0;
+			this.lblEffectiveClockRateDendy.Text = "Effective Clock Rate (Dendy):";
+			// 
+			// lblEffectiveClockRateValueDendy
+			// 
+			this.lblEffectiveClockRateValueDendy.AutoSize = true;
+			this.lblEffectiveClockRateValueDendy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblEffectiveClockRateValueDendy.Location = new System.Drawing.Point(157, 0);
+			this.lblEffectiveClockRateValueDendy.Name = "lblEffectiveClockRateValueDendy";
+			this.lblEffectiveClockRateValueDendy.Size = new System.Drawing.Size(37, 13);
+			this.lblEffectiveClockRateValueDendy.TabIndex = 1;
+			this.lblEffectiveClockRateValueDendy.Text = "100%";
+			// 
+			// flowLayoutPanel3
+			// 
+			this.flowLayoutPanel3.Controls.Add(this.lblEffectiveClockRatePal);
+			this.flowLayoutPanel3.Controls.Add(this.lblEffectiveClockRateValuePal);
+			this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 135);
+			this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+			this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+			this.flowLayoutPanel3.Size = new System.Drawing.Size(519, 17);
+			this.flowLayoutPanel3.TabIndex = 9;
+			// 
+			// lblEffectiveClockRatePal
+			// 
+			this.lblEffectiveClockRatePal.AutoSize = true;
+			this.lblEffectiveClockRatePal.Location = new System.Drawing.Point(3, 0);
+			this.lblEffectiveClockRatePal.Name = "lblEffectiveClockRatePal";
+			this.lblEffectiveClockRatePal.Size = new System.Drawing.Size(137, 13);
+			this.lblEffectiveClockRatePal.TabIndex = 0;
+			this.lblEffectiveClockRatePal.Text = "Effective Clock Rate (PAL):";
+			// 
+			// lblEffectiveClockRateValuePal
+			// 
+			this.lblEffectiveClockRateValuePal.AutoSize = true;
+			this.lblEffectiveClockRateValuePal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblEffectiveClockRateValuePal.Location = new System.Drawing.Point(146, 0);
+			this.lblEffectiveClockRateValuePal.Name = "lblEffectiveClockRateValuePal";
+			this.lblEffectiveClockRateValuePal.Size = new System.Drawing.Size(37, 13);
+			this.lblEffectiveClockRateValuePal.TabIndex = 1;
+			this.lblEffectiveClockRateValuePal.Text = "100%";
+			// 
+			// grpPpuTiming
+			// 
+			this.grpPpuTiming.Controls.Add(this.tableLayoutPanel5);
+			this.grpPpuTiming.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.grpPpuTiming.Location = new System.Drawing.Point(3, 44);
+			this.grpPpuTiming.Name = "grpPpuTiming";
+			this.grpPpuTiming.Size = new System.Drawing.Size(513, 71);
+			this.grpPpuTiming.TabIndex = 7;
+			this.grpPpuTiming.TabStop = false;
+			this.grpPpuTiming.Text = "PPU Vertical Blank Configuration";
+			// 
+			// tableLayoutPanel5
+			// 
+			this.tableLayoutPanel5.ColumnCount = 2;
+			this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+			this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+			this.tableLayoutPanel5.Controls.Add(this.nudExtraScanlinesAfterNmi, 1, 1);
+			this.tableLayoutPanel5.Controls.Add(this.nudExtraScanlinesBeforeNmi, 1, 0);
+			this.tableLayoutPanel5.Controls.Add(this.lblExtraScanlinesBeforeNmi, 0, 0);
+			this.tableLayoutPanel5.Controls.Add(this.lblExtraScanlinesAfterNmi, 0, 1);
+			this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
+			this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+			this.tableLayoutPanel5.RowCount = 3;
+			this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel5.Size = new System.Drawing.Size(507, 52);
+			this.tableLayoutPanel5.TabIndex = 0;
+			// 
+			// nudExtraScanlinesAfterNmi
+			// 
+			this.nudExtraScanlinesAfterNmi.DecimalPlaces = 0;
+			this.nudExtraScanlinesAfterNmi.Increment = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.nudExtraScanlinesAfterNmi.Location = new System.Drawing.Point(165, 30);
-            this.nudExtraScanlinesAfterNmi.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.nudExtraScanlinesAfterNmi.Maximum = new decimal(new int[] {
+			this.nudExtraScanlinesAfterNmi.Location = new System.Drawing.Point(165, 30);
+			this.nudExtraScanlinesAfterNmi.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+			this.nudExtraScanlinesAfterNmi.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nudExtraScanlinesAfterNmi.MaximumSize = new System.Drawing.Size(10000, 20);
-            this.nudExtraScanlinesAfterNmi.Minimum = new decimal(new int[] {
+			this.nudExtraScanlinesAfterNmi.MaximumSize = new System.Drawing.Size(10000, 20);
+			this.nudExtraScanlinesAfterNmi.Minimum = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.nudExtraScanlinesAfterNmi.MinimumSize = new System.Drawing.Size(0, 21);
-            this.nudExtraScanlinesAfterNmi.Name = "nudExtraScanlinesAfterNmi";
-            this.nudExtraScanlinesAfterNmi.Size = new System.Drawing.Size(46, 21);
-            this.nudExtraScanlinesAfterNmi.TabIndex = 3;
-            this.nudExtraScanlinesAfterNmi.Value = new decimal(new int[] {
+			this.nudExtraScanlinesAfterNmi.MinimumSize = new System.Drawing.Size(0, 21);
+			this.nudExtraScanlinesAfterNmi.Name = "nudExtraScanlinesAfterNmi";
+			this.nudExtraScanlinesAfterNmi.Size = new System.Drawing.Size(46, 21);
+			this.nudExtraScanlinesAfterNmi.TabIndex = 3;
+			this.nudExtraScanlinesAfterNmi.Value = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            // 
-            // nudExtraScanlinesBeforeNmi
-            // 
-            this.nudExtraScanlinesBeforeNmi.DecimalPlaces = 0;
-            this.nudExtraScanlinesBeforeNmi.Increment = new decimal(new int[] {
+			// 
+			// nudExtraScanlinesBeforeNmi
+			// 
+			this.nudExtraScanlinesBeforeNmi.DecimalPlaces = 0;
+			this.nudExtraScanlinesBeforeNmi.Increment = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.nudExtraScanlinesBeforeNmi.Location = new System.Drawing.Point(165, 3);
-            this.nudExtraScanlinesBeforeNmi.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.nudExtraScanlinesBeforeNmi.Maximum = new decimal(new int[] {
+			this.nudExtraScanlinesBeforeNmi.Location = new System.Drawing.Point(165, 3);
+			this.nudExtraScanlinesBeforeNmi.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+			this.nudExtraScanlinesBeforeNmi.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nudExtraScanlinesBeforeNmi.MaximumSize = new System.Drawing.Size(10000, 20);
-            this.nudExtraScanlinesBeforeNmi.Minimum = new decimal(new int[] {
+			this.nudExtraScanlinesBeforeNmi.MaximumSize = new System.Drawing.Size(10000, 20);
+			this.nudExtraScanlinesBeforeNmi.Minimum = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.nudExtraScanlinesBeforeNmi.MinimumSize = new System.Drawing.Size(0, 21);
-            this.nudExtraScanlinesBeforeNmi.Name = "nudExtraScanlinesBeforeNmi";
-            this.nudExtraScanlinesBeforeNmi.Size = new System.Drawing.Size(46, 21);
-            this.nudExtraScanlinesBeforeNmi.TabIndex = 2;
-            this.nudExtraScanlinesBeforeNmi.Value = new decimal(new int[] {
+			this.nudExtraScanlinesBeforeNmi.MinimumSize = new System.Drawing.Size(0, 21);
+			this.nudExtraScanlinesBeforeNmi.Name = "nudExtraScanlinesBeforeNmi";
+			this.nudExtraScanlinesBeforeNmi.Size = new System.Drawing.Size(46, 21);
+			this.nudExtraScanlinesBeforeNmi.TabIndex = 2;
+			this.nudExtraScanlinesBeforeNmi.Value = new decimal(new int[] {
             100,
             0,
             0,
             0});
-
 			// 
 			// lblExtraScanlinesBeforeNmi
 			// 
@@ -1002,6 +1017,6 @@ namespace Mesen.GUI.Forms.Config
 		private ctrlRiskyOption chkRandomizeCpuPpuAlignment;
 		private ctrlRiskyOption chkEnablePpu2000ScrollGlitch;
 		private ctrlRiskyOption chkEnablePpu2006ScrollGlitch;
-	  private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-   }
+			private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+	 }
 }
