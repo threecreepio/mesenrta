@@ -678,7 +678,6 @@
 			this.AutoSize = true;
 			this.ClientSize = new System.Drawing.Size(370, 271);
 			this.Controls.Add(this.tabMain);
-			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;

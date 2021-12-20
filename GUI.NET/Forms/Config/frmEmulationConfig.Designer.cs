@@ -915,7 +915,6 @@ namespace Mesen.GUI.Forms.Config
 			this.AutoSize = true;
 			this.ClientSize = new System.Drawing.Size(533, 437);
 			this.Controls.Add(this.tabMain);
-			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
