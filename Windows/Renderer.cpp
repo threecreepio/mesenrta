@@ -658,14 +658,14 @@ void Renderer::Render()
 void Renderer::DrawString(std::wstring message, int x, int y, uint8_t r, uint8_t g, uint8_t b, uint8_t opacity)
 {
 	XMVECTORF32 color = { (float)r / 255.0f, (float)g / 255.0f, (float)b / 255.0f, (float)opacity / 255.0f };
-	_font->DrawString(_spriteBatch.get(), message.c_str(), XMFLOAT2((float)x+_leftMargin, (float)y+_topMargin), color);
+	_font->DrawString(_spriteBatch.get(), message.c_str(), XMFLOAT2((float)x+_leftMargin, (float)y+_topMargin), color, 0, XMFLOAT2(0, 0), GetUIScale());
 }
 
 float Renderer::MeasureString(std::wstring text)
 {
 	XMVECTOR measure = _font->MeasureString(text.c_str());
 	float* measureF = (float*)&measure;
-	return measureF[0];
+	return measureF[0] * GetUIScale();
 }
 
 bool Renderer::ContainsCharacter(wchar_t character)

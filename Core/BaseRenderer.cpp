@@ -95,13 +95,21 @@ std::wstring BaseRenderer::WrapText(string utf8Text, float maxLineWidth, uint32_
 	return wrappedText;
 }
 
+float BaseRenderer::GetUIScale()
+{
+	float scale = _screenWidth / 756.0f;
+	if (scale <= 1) scale = 1.0f;
+	return scale;
+}
+
 void BaseRenderer::DrawToast(shared_ptr<ToastInfo> toast, int &lastHeight)
 {
 	//Get opacity for fade in/out effect
+
 	uint8_t opacity = (uint8_t)(toast->GetOpacity()*255);
 	int textLeftMargin = 4;
 
-	int lineHeight = 25;
+	int lineHeight = 25 * GetUIScale();
 	string text = "[" + toast->GetToastTitle() + "] " + toast->GetToastMessage();
 	uint32_t lineCount = 0;
 	std::wstring wrappedText = WrapText(text, (float)(_screenWidth - textLeftMargin * 2 - 20), lineCount);
