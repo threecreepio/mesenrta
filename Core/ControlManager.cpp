@@ -305,6 +305,11 @@ void ControlManager::UpdateInputState()
 	_pollCounter++;
 }
 
+bool ControlManager::IsLagging()
+{
+	return _isLagging;
+}
+
 uint32_t ControlManager::GetLagCounter()
 {
 	return _lagCounter;

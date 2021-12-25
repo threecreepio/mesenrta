@@ -166,18 +166,22 @@ void DrawSmallFramecounter(shared_ptr<Console> console, uint32_t* rgbaBuffer, Fr
 	}
 
 	uint32_t settingColor = GetSettingColor(console);
-	uint32_t outlineColors[3] = { 0xFF111111, 0xFF117111, 0xFF711111 };
+	if (console->GetControlManager()->IsLagging()) settingColor = 3; // lagframe color
+
+	uint32_t outlineColors[4] = { 0xFF111111, 0xFF117111, 0xFF711111, 0xFFBB1111 };
 	int number = console->GetFrameCount();
 	int start = 1;
 	for (int i = 1; i < 6; i += 1) {
-		int digit = (number / start) % 10;
+		int digit = (number / start);
+		int digitMod = digit % 10;
+		int digitColor = settingColor;
 		int digitX = 39 + (i * -5);
 		for (int x = 0; x < 5; ++x) {
 			for (int y = 0; y < 5; ++y) {
 				uint32_t bufferPos = ((yStart + y) * frameInfo.Width) + (xStart + x) + digitX;
-				int bitset = _digits[digit][y * 5 + x];
+				int bitset = _digits[digitMod][y * 5 + x];
 				if (bitset > 0) {
-					BlendColors2(rgbaBuffer + bufferPos, outlineColors[settingColor]);
+					BlendColors2(rgbaBuffer + bufferPos, outlineColors[digitColor]);
 				}
 			}
 		}

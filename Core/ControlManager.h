@@ -51,6 +51,7 @@ public:
 
 	uint32_t GetLagCounter();
 	void ResetLagCounter();
+	bool IsLagging();
 
 	uint32_t GetPollCounter();
 	void SetPollCounter(uint32_t value);
