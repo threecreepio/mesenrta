@@ -357,8 +357,8 @@ void VideoHud::DrawMovieIcons(shared_ptr<Console> console, uint32_t *outputBuffe
 	uint32_t speed = console->GetSettings()->GetEmulationSpeed();
 	uint32_t overclock1 = console->GetSettings()->GetPpuExtraScanlinesAfterNmi();
 	uint32_t overclock2 = console->GetSettings()->GetPpuExtraScanlinesBeforeNmi();
-	if (speed < 100 || rewinder->IsRewinding()) ffwd = -1;
-	if (speed > 100 || speed == 0 || overclock1 != 0 || overclock2 != 0) ffwd = 1;
+	if (speed != 100 || overclock1 != 0 || overclock2 != 0) ffwd = 1;
+	if ((speed != 0 && speed < 100) || rewinder->IsRewinding()) ffwd = -1;
 	if (ffwd != 0) {
 		int width = 17;
 		int height = 12;
