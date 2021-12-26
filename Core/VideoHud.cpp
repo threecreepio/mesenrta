@@ -39,6 +39,8 @@ int GetSettingColor(shared_ptr<Console> console) {
 		return 2;
 	}
 
+	if (console->GetHistoryViewer() != NULL) return 2;
+
 	if (console->IsUnclean()) return 2;
 
 	shared_ptr<Debugger> dbg = console->GetDebugger(false);
