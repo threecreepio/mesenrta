@@ -306,7 +306,7 @@ bool Console::Initialize(VirtualFile &romFile, VirtualFile &patchFile, bool forP
 
 			shared_ptr<BaseMapper> previousMapper = _mapper;
 			_mapper = mapper;
-			_memoryManager.reset(new MemoryManager(shared_from_this()));
+			_memoryManager.reset(new MemoryManager(shared_from_this(), IsUnclean()));
 			_cpu.reset(new CPU(shared_from_this()));
 			_apu.reset(new APU(shared_from_this()));
 
@@ -402,6 +402,7 @@ bool Console::Initialize(VirtualFile &romFile, VirtualFile &patchFile, bool forP
 
 			//Reset components before creating rewindmanager, otherwise the first save state it takes will be invalid
 			if(!forPowerCycle) {
+				_memoryManager->SetUnclean(false);
 				KeyManager::UpdateDevices();
 				_rewindManager.reset(new RewindManager(shared_from_this()));
 				_notificationManager->RegisterNotificationListener(_rewindManager);
@@ -588,8 +589,9 @@ void Console::ShowResetStatus(int resetType) {
 	std::string resetTypeMsg[3] = { "Reset", "HardReset", "GameLoaded" };
 	string modelName = _model == NesModel::PAL ? "PAL" : (_model == NesModel::Dendy ? "Dendy" : "NTSC");
 	string messageTitle = version + " " + modelName + " " + MessageManager::Localize(resetTypeMsg[resetType]);
+	string messageBody = IsUnclean() ? "Modified %1" : "%1";
 
-	MessageManager::DisplayMessage(messageTitle,GetRomInfo().Hash.Sha1);
+	MessageManager::DisplayMessage(messageTitle, messageBody, GetRomInfo().Hash.Sha1);
 	if (resetType == 0) {
 		std::vector cheats = GetCheatManager()->GetCheats();
 		GetCheatManager()->SetCheats(cheats);
@@ -964,10 +966,21 @@ bool Console::IsExecutionStopped()
 
 bool Console::IsPaused()
 {
-	if(_master) {
+	if (_master) {
 		return _master->_paused;
-	} else {
+	}
+	else {
 		return _paused;
+	}
+}
+
+bool Console::IsUnclean()
+{
+	if (_initialized) {
+		return _memoryManager->IsUnclean();
+	}
+	else {
+		return false;
 	}
 }
 

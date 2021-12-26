@@ -127,6 +127,7 @@ public:
 	bool IsDualSystem();
 	shared_ptr<Console> GetDualConsole();
 	bool IsMaster();
+	bool IsUnclean();
 
 	void ProcessCpuClock();
 	CPU* GetCpu();

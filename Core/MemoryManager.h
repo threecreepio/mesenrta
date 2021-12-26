@@ -19,6 +19,7 @@ class MemoryManager : public Snapshotable
 		shared_ptr<BaseMapper> _mapper;
 
 		uint8_t *_internalRAM;
+		bool _isUnclean = false;
 
 		OpenBusHandler _openBusHandler;
 		InternalRamHandler<0x7FF> _internalRamHandler;
@@ -33,9 +34,11 @@ class MemoryManager : public Snapshotable
 	public:
 		static const int InternalRAMSize = 0x800;
 
-		MemoryManager(shared_ptr<Console> console);
+		MemoryManager(shared_ptr<Console> console, bool unclean);
 		~MemoryManager();
 
+		void SetUnclean(bool unclean);
+		bool IsUnclean();
 		void SetMapper(shared_ptr<BaseMapper> mapper);
 		
 		void Reset(bool softReset);

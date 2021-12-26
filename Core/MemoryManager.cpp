@@ -5,11 +5,12 @@
 #include "CheatManager.h"
 #include "Console.h"
 
-MemoryManager::MemoryManager(shared_ptr<Console> console)
+MemoryManager::MemoryManager(shared_ptr<Console> console, bool unclean)
 {
 	_console = console;
 	_internalRAM = new uint8_t[InternalRAMSize];
 	_internalRamHandler.SetInternalRam(_internalRAM);
+	_isUnclean = unclean;
 
 	_ramReadHandlers = new IMemoryHandler*[RAMSize];
 	_ramWriteHandlers = new IMemoryHandler*[RAMSize];
@@ -163,10 +164,18 @@ uint32_t MemoryManager::ToAbsolutePrgAddress(uint16_t ramAddr)
 void MemoryManager::StreamState(bool saving)
 {
 	ArrayInfo<uint8_t> internalRam = { _internalRAM, MemoryManager::InternalRAMSize };
-	Stream(internalRam);
+	Stream(internalRam, _isUnclean);
 }
 
 uint8_t MemoryManager::GetOpenBus(uint8_t mask)
 {
 	return _openBusHandler.GetOpenBus() & mask;
+}
+
+bool MemoryManager::IsUnclean() {
+	return _isUnclean;
+}
+
+void MemoryManager::SetUnclean(bool unclean) {
+	_isUnclean = unclean;
 }

@@ -22,6 +22,7 @@ MemoryDumper::MemoryDumper(shared_ptr<PPU> ppu, shared_ptr<MemoryManager> memory
 
 void MemoryDumper::SetMemoryState(DebugMemoryType type, uint8_t *buffer, int32_t length)
 {
+	_memoryManager->SetUnclean(true);
 	switch(type) {
 		case DebugMemoryType::ChrRom:
 		case DebugMemoryType::PrgRom:
@@ -151,6 +152,7 @@ uint32_t MemoryDumper::GetMemoryState(DebugMemoryType type, uint8_t *buffer)
 
 void MemoryDumper::SetMemoryValues(DebugMemoryType memoryType, uint32_t address, uint8_t* data, int32_t length)
 {
+	_memoryManager->SetUnclean(true);
 	vector<uint8_t> originalRomData = _mapper->GetPrgChrCopy();
 	for(int i = 0; i < length; i++) {
 		SetMemoryValue(memoryType, address+i, data[i], true);
@@ -174,6 +176,7 @@ void MemoryDumper::SetMemoryValues(DebugMemoryType memoryType, uint32_t address,
 
 void MemoryDumper::SetMemoryValue(DebugMemoryType memoryType, uint32_t address, uint8_t value, bool preventRebuildCache, bool disableSideEffects)
 {
+	_memoryManager->SetUnclean(true);
 	vector<uint8_t> originalRomData;
 	if(!preventRebuildCache) {
 		originalRomData = _mapper->GetPrgChrCopy();
@@ -239,6 +242,7 @@ uint16_t MemoryDumper::GetMemoryValueWord(DebugMemoryType memoryType, uint32_t a
 
 void MemoryDumper::SetMemoryValueWord(DebugMemoryType memoryType, uint32_t address, uint16_t value, bool preventRebuildCache, bool disableSideEffects)
 {
+	_memoryManager->SetUnclean(true);
 	SetMemoryValue(memoryType, address, (uint8_t)value, preventRebuildCache, disableSideEffects);
 	SetMemoryValue(memoryType, address + 1, (uint8_t)(value >> 8), preventRebuildCache, disableSideEffects);
 }
