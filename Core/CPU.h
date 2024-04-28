@@ -62,6 +62,7 @@ private:
 	bool _prevNmiFlag = false;
 	bool _prevNeedNmi = false;
 	bool _needNmi = false;
+	bool _jammed = false;
 
 	uint64_t _lastCrashWarning = 0;
 
@@ -745,6 +746,8 @@ private:
 	{
 		//normally freezes the cpu, we can probably assume nothing will ever call this
 		GetOperandValue();
+		SetPC((_state.PC - 1) & 0xFFFF);
+		_jammed = true;
 	}
 
 	void UNK()

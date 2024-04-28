@@ -75,10 +75,12 @@ CPU::CPU(shared_ptr<Console> console)
 	_state = {};
 	_prevRunIrq = false;
 	_runIrq = false;
+	_jammed = false;
 }
 
 void CPU::Reset(bool softReset, NesModel model)
 {
+	_jammed = false;
 	_state.NMIFlag = false;
 	_state.IRQFlag = 0;
 
@@ -160,6 +162,11 @@ void CPU::Reset(bool softReset, NesModel model)
 
 void CPU::Exec()
 {
+	if (_jammed) {
+		StartCpuCycle(true);
+		EndCpuCycle(true);
+		return;
+	}
 	uint8_t opCode = GetOPCode();
 	_instAddrMode = _addrMode[opCode];
 	_operand = FetchOperand();
@@ -478,7 +485,7 @@ void CPU::StreamState(bool saving)
 			_state.IRQFlag, _dmcDmaRunning, _spriteDmaTransfer,
 			extraScanlinesBeforeNmi, extraScanlinesBeforeNmi, dipSwitches,
 			_needDummyRead, _needHalt, _startClockCount, _endClockCount, _ppuOffset, _masterClock,
-			_prevNeedNmi, _prevNmiFlag, _needNmi);
+			_prevNeedNmi, _prevNmiFlag, _needNmi, _jammed);
 
 	if(!saving) {
 		settings->SetPpuNmiConfig(extraScanlinesBeforeNmi, extraScanlinesAfterNmi);
