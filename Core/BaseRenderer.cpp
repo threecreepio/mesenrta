@@ -148,7 +148,7 @@ void BaseRenderer::ShowFpsCounter(int lineNumber)
 	}
 
 	string fpsString = string("FPS: ") + std::to_string(_currentFPS) + " / " + std::to_string(_currentRenderedFPS);
-	DrawString(fpsString, _screenWidth - 125, yPos, 250, 235, 215);
+	DrawString(fpsString, _screenWidth - 125 * GetUIScale(), yPos, 250, 235, 215);
 }
 
 void BaseRenderer::ShowGameTimer(int lineNumber)
@@ -166,21 +166,21 @@ void BaseRenderer::ShowGameTimer(int lineNumber)
 	ss << std::setw(2) << std::setfill('0') << minutes << ":";
 	ss << std::setw(2) << std::setfill('0') << seconds;
 	//ss << "." << std::setw(3) << std::setfill('0') << milliseconds;
-	DrawString(ss.str(), _screenWidth - 95, yPos, 250, 235, 215);
+	DrawString(ss.str(), _screenWidth - 95 * GetUIScale(), yPos, 250, 235, 215);
 }
 
 void BaseRenderer::ShowLagCounter(int lineNumber)
 {
 	int yPos = 13 + 24 * lineNumber;
 	string lagCounter = MessageManager::Localize("Lag") + ": " + std::to_string(_console->GetLagCounter());
-	DrawString(lagCounter, _screenWidth - 123, yPos, 250, 235, 215);
+	DrawString(lagCounter, _screenWidth - 123 * GetUIScale(), yPos, 250, 235, 215);
 }
 
 void BaseRenderer::ShowFrameCounter(int lineNumber)
 {
 	int yPos = 13 + 24 * lineNumber;
 	string lagCounter = MessageManager::Localize("Frame") + ": " + std::to_string(_console->GetFrameCount());
-	DrawString(lagCounter, _screenWidth - 146, yPos, 250, 235, 215);
+	DrawString(lagCounter, _screenWidth - 146 * GetUIScale(), yPos, 250, 235, 215);
 }
 
 void BaseRenderer::DrawCounters()
